@@ -54,7 +54,7 @@ const Coursework = () => {
     const colors = [
       "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
       "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
-      "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
+      "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-200",
       "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200",
       "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200",
       "bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200"
@@ -69,7 +69,7 @@ const Coursework = () => {
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Relevant Coursework
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto rounded-full"></div>
           <p className="text-lg text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto">
             A comprehensive foundation in computer science, mathematics, and business principles
           </p>
@@ -87,7 +87,7 @@ const Coursework = () => {
                   <div className={`w-3 h-3 rounded-full mr-3 ${
                     categoryIndex === 0 ? 'bg-blue-500' :
                     categoryIndex === 1 ? 'bg-green-500' :
-                    categoryIndex === 2 ? 'bg-purple-500' : 'bg-orange-500'
+                    categoryIndex === 2 ? 'bg-cyan-500' : 'bg-orange-500'
                   }`}></div>
                   {category.title}
                 </CardTitle>
@@ -113,7 +113,7 @@ const Coursework = () => {
         {/* GPA and Academic Standing */}
         <div className="mt-16 text-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-6 rounded-xl shadow-lg">
+            <div className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white p-6 rounded-xl shadow-lg">
               <div className="text-3xl font-bold mb-2">3.85</div>
               <div className="text-sm opacity-90">Cumulative GPA</div>
             </div>
@@ -121,7 +121,7 @@ const Coursework = () => {
               <div className="text-3xl font-bold mb-2">Dean's List</div>
               <div className="text-sm opacity-90">3 Semesters</div>
             </div>
-            <div className="bg-gradient-to-r from-purple-500 to-pink-600 text-white p-6 rounded-xl shadow-lg">
+            <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white p-6 rounded-xl shadow-lg">
               <div className="text-3xl font-bold mb-2">120+</div>
               <div className="text-sm opacity-90">Credit Hours</div>
             </div>

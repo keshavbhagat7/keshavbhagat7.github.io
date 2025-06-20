@@ -54,8 +54,8 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
     
     /* Custom portfolio colors */
-    --portfolio-primary: 239 84% 67%;
-    --portfolio-secondary: 262 83% 58%;
+    --portfolio-primary: 215 98% 61%;
+    --portfolio-secondary: 197 71% 52%;
     --portfolio-accent: 213 93% 68%;
     --portfolio-surface: 0 0% 98%;
     --portfolio-text: 222.2 84% 4.9%;
@@ -99,8 +99,8 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
     
     /* Custom portfolio colors for dark mode */
-    --portfolio-primary: 239 84% 67%;
-    --portfolio-secondary: 262 83% 58%;
+    --portfolio-primary: 215 98% 61%;
+    --portfolio-secondary: 197 71% 52%;
     --portfolio-accent: 213 93% 68%;
     --portfolio-surface: 222.2 84% 4.9%;
     --portfolio-text: 210 40% 98%;
@@ -123,11 +123,11 @@
 
 @layer components {
   .gradient-text {
-    @apply bg-gradient-to-r from-blue-600 via-purple-600 to-blue-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-700 bg-clip-text text-transparent;
   }
   
   .gradient-bg {
-    @apply bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-purple-900;
+    @apply bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900;
   }
   
   .card-hover {
@@ -150,7 +150,7 @@
 
 @keyframes glow {
   from { box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); }
-  to { box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 30px rgba(147, 51, 234, 0.4); }
+  to { box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 30px rgba(6, 182, 212, 0.4); }
 }
 
 @keyframes slideInFromLeft {

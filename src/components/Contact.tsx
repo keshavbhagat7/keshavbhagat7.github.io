@@ -11,7 +11,7 @@ const Contact = () => {
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Let's Connect
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto rounded-full"></div>
           <p className="text-lg text-gray-600 dark:text-gray-300 mt-6 max-w-2xl mx-auto">
             I'm always excited to discuss new opportunities, collaborate on projects, or just chat about technology and innovation.
           </p>
@@ -28,7 +28,7 @@ const Contact = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Email */}
                 <div className="text-center group">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full mb-4 group-hover:scale-110 transition-transform duration-200">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 text-white rounded-full mb-4 group-hover:scale-110 transition-transform duration-200">
                     <Mail className="h-8 w-8" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Email</h3>
@@ -89,7 +89,7 @@ const Contact = () => {
                 </p>
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105"
+                  className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-3 rounded-full text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105"
                   asChild
                 >
                   <a href="mailto:alex.johnson@umich.edu">
