@@ -67,7 +67,7 @@ const Projects = () => {
         <div className="absolute top-2 right-2">
           <Badge
             variant={type === 'personal' ? 'default' : 'secondary'}
-            className={type === 'personal' ? 'bg-blue-600' : 'bg-green-600'}
+            className={type === 'personal' ? 'bg-black text-white dark:bg-white dark:text-black' : 'bg-gray-600 text-white dark:bg-gray-300 dark:text-black'}
           >
             {type === 'personal' ? 'Personal' : 'Academic'}
           </Badge>
@@ -89,7 +89,7 @@ const Projects = () => {
             <Badge
               key={index}
               variant="outline"
-              className="text-xs hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors"
+              className="text-xs hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors border-gray-300 dark:border-gray-600"
             >
               {tech}
             </Badge>
@@ -104,7 +104,7 @@ const Projects = () => {
             </a>
           </Button>
           {project.demo && (
-            <Button size="sm" asChild>
+            <Button size="sm" className="bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200" asChild>
               <a href={project.demo} target="_blank" rel="noopener noreferrer">
                 Live Demo
               </a>
@@ -116,13 +116,13 @@ const Projects = () => {
   );
 
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-gray-800">
+    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Projects
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-gray-600 to-black dark:from-gray-400 dark:to-white mx-auto rounded-full"></div>
         </div>
 
         {/* Personal Projects */}
