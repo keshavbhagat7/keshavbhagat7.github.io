@@ -31,7 +31,7 @@ const ScrollToTop = () => {
       {isVisible && (
         <Button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-110"
+          className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-gradient-to-r from-gray-800 to-black hover:from-gray-900 hover:to-gray-700 text-white shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-110"
           size="sm"
         >
           <ArrowUp className="h-5 w-5" />

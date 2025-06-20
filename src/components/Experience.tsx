@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
@@ -37,7 +36,7 @@ const Experience = () => {
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Experience
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-gray-600 to-black mx-auto rounded-full"></div>
         </div>
 
         <div className="space-y-8">
@@ -54,7 +53,7 @@ const Experience = () => {
                     <CardTitle className="text-xl font-bold text-gray-900 dark:text-white">
                       {exp.title}
                     </CardTitle>
-                    <CardDescription className="text-lg font-medium text-blue-600 dark:text-blue-400">
+                    <CardDescription className="text-lg font-medium text-gray-700 dark:text-gray-300">
                       {exp.company}
                     </CardDescription>
                     <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
@@ -72,7 +71,7 @@ const Experience = () => {
                     <Badge
                       key={skillIndex}
                       variant="secondary"
-                      className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors"
+                      className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
                     >
                       {skill}
                     </Badge>

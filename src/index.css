@@ -51,14 +51,14 @@
 
     --sidebar-border: 220 13% 91%;
 
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 0 0% 0%;
     
-    /* Custom portfolio colors */
-    --portfolio-primary: 215 98% 61%;
-    --portfolio-secondary: 197 71% 52%;
-    --portfolio-accent: 213 93% 68%;
+    /* Custom portfolio colors - now black and white */
+    --portfolio-primary: 0 0% 0%;
+    --portfolio-secondary: 0 0% 20%;
+    --portfolio-accent: 0 0% 40%;
     --portfolio-surface: 0 0% 98%;
-    --portfolio-text: 222.2 84% 4.9%;
+    --portfolio-text: 0 0% 0%;
   }
 
   .dark {
@@ -91,17 +91,17 @@
     --ring: 212.7 26.8% 83.9%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 0 0% 0%;
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 0 0% 100%;
     
-    /* Custom portfolio colors for dark mode */
-    --portfolio-primary: 215 98% 61%;
-    --portfolio-secondary: 197 71% 52%;
-    --portfolio-accent: 213 93% 68%;
+    /* Custom portfolio colors for dark mode - black and white */
+    --portfolio-primary: 0 0% 100%;
+    --portfolio-secondary: 0 0% 80%;
+    --portfolio-accent: 0 0% 60%;
     --portfolio-surface: 222.2 84% 4.9%;
     --portfolio-text: 210 40% 98%;
   }
@@ -123,15 +123,15 @@
 
 @layer components {
   .gradient-text {
-    @apply bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-700 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-black via-gray-700 to-gray-900 bg-clip-text text-transparent;
   }
   
   .gradient-bg {
-    @apply bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900;
+    @apply bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-black;
   }
   
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:shadow-blue-500/20;
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:shadow-gray-500/20;
   }
   
   .animate-float {
@@ -149,8 +149,8 @@
 }
 
 @keyframes glow {
-  from { box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); }
-  to { box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 30px rgba(6, 182, 212, 0.4); }
+  from { box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); }
+  to { box-shadow: 0 0 20px rgba(0, 0, 0, 0.6), 0 0 30px rgba(100, 100, 100, 0.4); }
 }
 
 @keyframes slideInFromLeft {

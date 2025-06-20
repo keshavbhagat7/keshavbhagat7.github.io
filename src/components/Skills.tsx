@@ -1,4 +1,3 @@
-
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -57,7 +56,7 @@ const Skills = () => {
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Skills & Technologies
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-gray-600 to-black mx-auto rounded-full"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -86,7 +85,7 @@ const Skills = () => {
                       </div>
                       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                         <div
-                          className="bg-gradient-to-r from-blue-600 to-cyan-600 h-2 rounded-full transition-all duration-1000 ease-out"
+                          className="bg-gradient-to-r from-gray-600 to-black h-2 rounded-full transition-all duration-1000 ease-out"
                           style={{ width: `${skill.level}%` }}
                         ></div>
                       </div>
@@ -112,7 +111,7 @@ const Skills = () => {
               <Badge
                 key={index}
                 variant="outline"
-                className="px-4 py-2 text-sm hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-200 hover:scale-105 cursor-default"
+                className="px-4 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 hover:scale-105 cursor-default"
               >
                 {tech}
               </Badge>
