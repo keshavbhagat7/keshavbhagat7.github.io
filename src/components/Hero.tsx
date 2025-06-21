@@ -1,6 +1,6 @@
 
 import { Button } from '@/components/ui/button';
-import { ArrowDown, Download, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, Download } from 'lucide-react';
 
 const Hero = () => {
   const scrollToNext = () => {
@@ -35,47 +35,13 @@ const Hero = () => {
             Computer Science @ University of Michigan
           </p>
 
-          <p className="text-lg text-gray-500 dark:text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-500 dark:text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
             Passionate full-stack developer and computer science student with a love for creating 
             innovative solutions and beautiful user experiences. Always eager to learn and take on new challenges.
           </p>
 
-          {/* Social Links */}
-          <div className="flex justify-center space-x-6 mb-12">
-            <Button
-              variant="outline"
-              size="lg"
-              className="rounded-full p-3 hover:scale-110 transition-transform duration-200 hover:shadow-lg"
-              asChild
-            >
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                <Github className="h-6 w-6" />
-              </a>
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="rounded-full p-3 hover:scale-110 transition-transform duration-200 hover:shadow-lg"
-              asChild
-            >
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="h-6 w-6" />
-              </a>
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="rounded-full p-3 hover:scale-110 transition-transform duration-200 hover:shadow-lg"
-              asChild
-            >
-              <a href="mailto:alex@example.com">
-                <Mail className="h-6 w-6" />
-              </a>
-            </Button>
-          </div>
-
           {/* CTA */}
-          <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
+          <div className="mb-12">
             <Button
               size="lg"
               className="bg-gradient-to-r from-gray-800 to-black hover:from-gray-900 hover:to-gray-800 text-white px-8 py-3 rounded-full text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105"

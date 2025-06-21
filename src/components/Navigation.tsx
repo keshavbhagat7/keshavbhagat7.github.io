@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
 
 interface NavigationProps {
   activeSection: string;
@@ -40,8 +40,8 @@ const Navigation = ({ activeSection }: NavigationProps) => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+          <div className="hidden md:flex items-center space-x-4">
+            <div className="flex items-baseline space-x-4">
               {navItems.map((item) => (
                 <button
                   key={item.id}
@@ -55,6 +55,40 @@ const Navigation = ({ activeSection }: NavigationProps) => {
                   {item.label}
                 </button>
               ))}
+            </div>
+            
+            {/* Social Links */}
+            <div className="flex items-center space-x-2 ml-4">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="rounded-full p-2 hover:scale-110 transition-transform duration-200"
+                asChild
+              >
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                  <Github className="h-5 w-5" />
+                </a>
+              </Button>
+              <Button
+                variant="ghost"
+                size="sm"
+                className="rounded-full p-2 hover:scale-110 transition-transform duration-200"
+                asChild
+              >
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                  <Linkedin className="h-5 w-5" />
+                </a>
+              </Button>
+              <Button
+                variant="ghost"
+                size="sm"
+                className="rounded-full p-2 hover:scale-110 transition-transform duration-200"
+                asChild
+              >
+                <a href="mailto:alex@example.com">
+                  <Mail className="h-5 w-5" />
+                </a>
+              </Button>
             </div>
           </div>
 
@@ -88,6 +122,40 @@ const Navigation = ({ activeSection }: NavigationProps) => {
                 {item.label}
               </button>
             ))}
+            
+            {/* Mobile Social Links */}
+            <div className="flex justify-center space-x-4 pt-2 border-t border-gray-200 dark:border-gray-800">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="rounded-full p-2"
+                asChild
+              >
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                  <Github className="h-5 w-5" />
+                </a>
+              </Button>
+              <Button
+                variant="ghost"
+                size="sm"
+                className="rounded-full p-2"
+                asChild
+              >
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                  <Linkedin className="h-5 w-5" />
+                </a>
+              </Button>
+              <Button
+                variant="ghost"
+                size="sm"
+                className="rounded-full p-2"
+                asChild
+              >
+                <a href="mailto:alex@example.com">
+                  <Mail className="h-5 w-5" />
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       )}
