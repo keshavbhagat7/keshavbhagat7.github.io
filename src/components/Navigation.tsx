@@ -16,7 +16,6 @@ const Navigation = ({ activeSection }: NavigationProps) => {
     { id: 'projects', label: 'Projects' },
     { id: 'skills', label: 'Skills' },
     { id: 'coursework', label: 'Coursework' },
-    { id: 'contact', label: 'Contact' },
   ];
 
   const scrollToSection = (sectionId: string) => {
@@ -32,7 +31,12 @@ const Navigation = ({ activeSection }: NavigationProps) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <span className="text-2xl font-bold gradient-text">Alex Johnson</span>
+            <button
+              onClick={() => scrollToSection('home')}
+              className="text-2xl font-bold gradient-text hover:opacity-80 transition-opacity cursor-pointer"
+            >
+              Alex Johnson
+            </button>
           </div>
 
           {/* Desktop Navigation */}

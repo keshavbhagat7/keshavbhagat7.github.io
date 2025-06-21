@@ -11,7 +11,6 @@ import Experience from '@/components/Experience';
 import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
 import Coursework from '@/components/Coursework';
-import Contact from '@/components/Contact';
 import ScrollToTop from '@/components/ScrollToTop';
 import ThemeToggle from '@/components/ThemeToggle';
 
@@ -20,7 +19,7 @@ const Index = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'experience', 'projects', 'skills', 'coursework', 'contact'];
+      const sections = ['home', 'experience', 'projects', 'skills', 'coursework'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -47,7 +46,6 @@ const Index = () => {
         <Projects />
         <Skills />
         <Coursework />
-        <Contact />
       </main>
       
       <ScrollToTop />
