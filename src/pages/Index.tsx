@@ -7,7 +7,6 @@ import { Separator } from '@/components/ui/separator';
 import { ArrowDown, Download, Github, Linkedin, Mail } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
-import About from '@/components/About';
 import Experience from '@/components/Experience';
 import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
@@ -21,7 +20,7 @@ const Index = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'experience', 'projects', 'skills', 'coursework', 'contact'];
+      const sections = ['home', 'experience', 'projects', 'skills', 'coursework', 'contact'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -44,7 +43,6 @@ const Index = () => {
       
       <main className="relative">
         <Hero />
-        <About />
         <Experience />
         <Projects />
         <Skills />

@@ -12,7 +12,6 @@ const Navigation = ({ activeSection }: NavigationProps) => {
 
   const navItems = [
     { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
     { id: 'experience', label: 'Experience' },
     { id: 'projects', label: 'Projects' },
     { id: 'skills', label: 'Skills' },
@@ -33,7 +32,7 @@ const Navigation = ({ activeSection }: NavigationProps) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <span className="text-2xl font-bold gradient-text">Portfolio</span>
+            <span className="text-2xl font-bold gradient-text">Alex Johnson</span>
           </div>
 
           {/* Desktop Navigation */}
