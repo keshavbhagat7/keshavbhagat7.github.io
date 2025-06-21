@@ -46,7 +46,7 @@
     --sidebar-border: 0 0% 90%;
     --sidebar-ring: 0 0% 0%;
     
-    /* Custom portfolio colors - black and white */
+    /* Custom portfolio colors - black and white for light mode */
     --portfolio-primary: 0 0% 0%;
     --portfolio-secondary: 0 0% 20%;
     --portfolio-accent: 0 0% 40%;
@@ -91,7 +91,7 @@
     --sidebar-border: 0 0% 15%;
     --sidebar-ring: 0 0% 100%;
     
-    /* Custom portfolio colors for dark mode - black and white */
+    /* Custom portfolio colors for dark mode - black and lighter black */
     --portfolio-primary: 0 0% 100%;
     --portfolio-secondary: 0 0% 80%;
     --portfolio-accent: 0 0% 60%;
@@ -121,6 +121,10 @@
   
   .gradient-bg {
     @apply bg-white dark:bg-black;
+  }
+  
+  .gradient-bg-alt {
+    @apply bg-gray-50 dark:bg-gray-900;
   }
   
   .card-hover {
