@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Download } from 'lucide-react';
 
@@ -11,7 +10,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-16">
+    <section id="home" className="min-h-screen flex items-center justify-center pt-16 gradient-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-fade-in-up">
           {/* Profile Image */}
