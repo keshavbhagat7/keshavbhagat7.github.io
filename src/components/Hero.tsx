@@ -28,7 +28,7 @@ const Hero = () => {
           {/* Main Content */}
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
             <span className="block text-gray-900 dark:text-white">Hello, I'm</span>
-            <span className="block gradient-text animate-glow">Alex Johnson</span>
+            <span className="block gradient-text">Alex Johnson</span>
           </h1>
 
           <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-4 font-medium">
