@@ -84,9 +84,9 @@ const Coursework = () => {
               <CardHeader>
                 <CardTitle className="text-xl font-bold text-gray-900 dark:text-white flex items-center">
                   <div className={`w-3 h-3 rounded-full mr-3 ${
-                    categoryIndex === 0 ? 'bg-gray-500 dark:bg-gray-400' :
-                    categoryIndex === 1 ? 'bg-gray-600 dark:bg-gray-300' :
-                    categoryIndex === 2 ? 'bg-gray-700 dark:bg-gray-200' : 'bg-gray-800 dark:bg-gray-100'
+                    categoryIndex === 0 ? 'bg-gray-600 dark:bg-gray-400' :
+                    categoryIndex === 1 ? 'bg-gray-600 dark:bg-gray-400' :
+                    categoryIndex === 2 ? 'bg-gray-600 dark:bg-gray-400' : 'bg-gray-600 dark:bg-gray-400'
                   }`}></div>
                   {category.title}
                 </CardTitle>
