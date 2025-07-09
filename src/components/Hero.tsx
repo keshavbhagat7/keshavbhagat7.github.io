@@ -1,13 +1,7 @@
 import { Button } from '@/components/ui/button';
-import { ArrowDown, Download } from 'lucide-react';
+import { Download } from 'lucide-react';
 
 const Hero = () => {
-  const scrollToNext = () => {
-    const element = document.getElementById('experience');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-16 gradient-bg">
@@ -50,17 +44,6 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={scrollToNext}
-              className="rounded-full p-2"
-            >
-              <ArrowDown className="h-6 w-6" />
-            </Button>
-          </div>
         </div>
       </div>
     </section>
