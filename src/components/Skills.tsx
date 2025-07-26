@@ -6,45 +6,49 @@ const Skills = () => {
     {
       title: "Programming Languages",
       skills: [
+        { name: "C++", level: 90 },
         { name: "Python", level: 90 },
         { name: "JavaScript", level: 85 },
         { name: "TypeScript", level: 80 },
-        { name: "Java", level: 75 },
-        { name: "C++", level: 70 },
-        { name: "Go", level: 65 }
+        { name: "Dart", level: 75 },
+        { name: "Java", level: 70 },
+        { name: "Go", level: 60 }
       ]
     },
     {
       title: "Frontend",
       skills: [
-        { name: "React", level: 88 },
-        { name: "Next.js", level: 82 },
-        { name: "Vue.js", level: 75 },
-        { name: "Tailwind CSS", level: 90 },
+        { name: "React", level: 90 },
         { name: "HTML/CSS", level: 92 },
-        { name: "Redux", level: 78 }
+        { name: "Remix", level: 88 },
+        { name: "Tailwind CSS", level: 85 },
+        { name: "Flutter", level: 80 },
+        { name: "Redux", level: 75 },
+        { name: "Next.js", level: 70 },
       ]
     },
     {
       title: "Backend & Database",
       skills: [
+        { name: "FastAPI", level: 93 },
+        { name: "Prisma ORM", level: 90 },
+        { name: "PostgreSQL", level: 88 },
         { name: "Node.js", level: 85 },
-        { name: "Express", level: 80 },
-        { name: "Django", level: 75 },
-        { name: "PostgreSQL", level: 82 },
-        { name: "MongoDB", level: 78 },
-        { name: "Redis", level: 70 }
+        { name: "Express", level: 85 },
+        { name: "MySQL", level: 80 },
+        { name: "MongoDB", level: 75 },
       ]
     },
     {
       title: "Tools & Technologies",
       skills: [
         { name: "Git", level: 90 },
-        { name: "Docker", level: 75 },
+        { name: "Docker", level: 80 },
+        { name: "Postman", level: 85 },
+        { name: "Manifest V3", level: 75 },
         { name: "AWS", level: 70 },
-        { name: "Linux", level: 85 },
-        { name: "GraphQL", level: 72 },
-        { name: "Jest", level: 80 }
+        { name: "Reassure", level: 68 },
+        { name: "Github Actions", level: 65 },
       ]
     }
   ];
@@ -104,9 +108,23 @@ const Skills = () => {
           </h3>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              "React", "TypeScript", "Python", "Node.js", "Docker", "AWS",
-              "PostgreSQL", "MongoDB", "GraphQL", "Redux", "Tailwind CSS",
-              "Jest", "Git", "Linux", "Django", "Express", "Vue.js", "Next.js"
+              "Python",
+              "C++",
+              "React",
+              "Remix",
+              "FastAPI",
+              "Prisma ORM",
+              "PostgreSQL",
+              "TypeScript",
+              "Tailwind CSS",
+              "Flutter",
+              "Node.js",
+              "Express",
+              "MySQL",
+              "MongoDB",
+              "Git",
+              "Docker",
+              "Postman",
             ].map((tech, index) => (
               <Badge
                 key={index}

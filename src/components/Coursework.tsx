@@ -4,47 +4,42 @@ import { Badge } from '@/components/ui/badge';
 const Coursework = () => {
   const courseCategories = [
     {
-      title: "Core Computer Science",
+      title: "Core Computer Science & Programming",
       courses: [
-        "Data Structures & Algorithms",
-        "Computer Systems Programming", 
-        "Database Management Systems",
-        "Operating Systems",
-        "Computer Networks",
-        "Software Engineering"
+        "EECS 183 Elementary Programming Concepts",
+        "EECS 203 Discrete Mathematics",
+        "EECS 280 Programming & Data Structures",
+        "EECS 281 Data Structures & Algorithms",
+        "EECS 376 Foundations of Computer Science",
+        "EECS 201 Computer Science Pragmatics"
       ]
     },
     {
-      title: "AI & Machine Learning",
+      title: "Computer Science Specializations",
       courses: [
-        "Introduction to Machine Learning",
-        "Artificial Intelligence",
-        "Deep Learning",
-        "Natural Language Processing",
-        "Computer Vision",
-        "Data Mining"
+       "EECS 370 Introduction to Computer Organization",
+        "EECS 482 Introduction to Operating Systems",
+        "EECS 491 Introduction to Distributed Systems",
+        "EECS 485 Web Systems",
+        "EECS 484 Database Management Systems",
+        "EECS 492 Introduction to Artificial Intelligence"
       ]
     },
     {
-      title: "Mathematics & Theory",
+      title: "Business & Economics",
       courses: [
-        "Discrete Mathematics",
-        "Linear Algebra",
-        "Statistics & Probability",
-        "Algorithms & Complexity",
-        "Mathematical Reasoning",
-        "Calculus I-III"
+        "MKT 302 Marketing Management",
+        "TO 302 Managing Business Operations",
+        "FIN 302 Making Financial Decisions",
+        "STRATEGY 302 Business Strategy",
+        "ECON 101 Principles of Economics I",
       ]
     },
     {
-      title: "Business & Leadership",
+      title: "Mathematics & Statistics",
       courses: [
-        "Business Administration",
-        "Project Management",
-        "Entrepreneurship",
-        "Marketing Strategy",
-        "Financial Analysis",
-        "Leadership Principles"
+        "MATH 116 Calculus II",
+        "STATS 250 Introduction to Statistics & Data Analysis"
       ]
     }
   ];
@@ -113,15 +108,15 @@ const Coursework = () => {
         <div className="mt-16 text-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="bg-gradient-to-r from-gray-600 to-black text-white p-6 rounded-xl shadow-lg">
-              <div className="text-3xl font-bold mb-2">3.85</div>
+              <div className="text-3xl font-bold mb-2">3.829</div>
               <div className="text-sm opacity-90">Cumulative GPA</div>
             </div>
             <div className="bg-gradient-to-r from-gray-700 to-gray-900 text-white p-6 rounded-xl shadow-lg">
-              <div className="text-3xl font-bold mb-2">Dean's List</div>
-              <div className="text-sm opacity-90">3 Semesters</div>
+              <div className="text-3xl font-bold mb-2">6 Semesters</div>
+              <div className="text-sm opacity-90">University Honors</div>
             </div>
             <div className="bg-gradient-to-r from-gray-800 to-black text-white p-6 rounded-xl shadow-lg">
-              <div className="text-3xl font-bold mb-2">120+</div>
+              <div className="text-3xl font-bold mb-2">100+</div>
               <div className="text-sm opacity-90">Credit Hours</div>
             </div>
           </div>

@@ -1,48 +1,48 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Book, Code, Gamepad2, Music, Plane, Camera, Coffee, Bike } from 'lucide-react';
+import { Book, Volleyball, Tv, Bike, Dumbbell } from 'lucide-react';
 
 const Interests = () => {
   const interests = [
     {
-      category: "Technology",
-      icon: Code,
+      category: "Sports",
+      icon: Volleyball,
       items: [
-        "Open Source Projects",
-        "Tech Podcasts",
-        "Hackathons",
-        "Code Reviews"
+        "Cricket",
+        "Soccer",
+        "F1",
+        "Football"
       ]
     },
     {
-      category: "Learning",
-      icon: Book,
+      category: "Shows",
+      icon: Tv,
       items: [
-        "Technical Books",
-        "Online Courses",
-        "Programming Languages",
-        "System Design"
-      ]
-    },
-    {
-      category: "Creative",
-      icon: Camera,
-      items: [
-        "Photography",
-        "UI/UX Design",
-        "Digital Art",
-        "Video Editing"
+        "The Big Bang Theory",
+        "Suits",
+        "Sherlock",
+        "Friends",
       ]
     },
     {
       category: "Lifestyle",
-      icon: Coffee,
+      icon: Dumbbell,
       items: [
-        "Coffee Brewing",
+        "Working out",
         "Travel",
-        "Cycling",
-        "Gaming"
+        "Reading",
+        "Music"
+      ]
+    },
+    {
+      category: "Adventure Sports",
+      icon: Bike,
+      items: [
+        "Sky diving",
+        "Hiking",
+        "Rafting",
+        "Bungee Jumping",
       ]
     }
   ];
@@ -56,7 +56,7 @@ const Interests = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-gray-600 to-black mx-auto rounded-full"></div>
           <p className="text-lg text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto">
-            Beyond coding, I'm passionate about continuous learning and exploring creative outlets
+            Beyond coding, I'm passionate about sports, shows, adventure, and travel
           </p>
         </div>
 

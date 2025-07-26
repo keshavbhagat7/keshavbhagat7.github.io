@@ -36,7 +36,7 @@ const Navigation = ({ activeSection }: NavigationProps) => {
               onClick={() => scrollToSection('home')}
               className="text-2xl font-bold gradient-text hover:opacity-80 transition-opacity cursor-pointer"
             >
-              Alex Johnson
+              Keshav Bhagat
             </button>
           </div>
 
@@ -76,7 +76,7 @@ const Navigation = ({ activeSection }: NavigationProps) => {
                 className="rounded-full p-2 hover:scale-110 transition-transform duration-200"
                 asChild
               >
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/keshavbhagat7/" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-5 w-5" />
                 </a>
               </Button>
@@ -86,7 +86,7 @@ const Navigation = ({ activeSection }: NavigationProps) => {
                 className="rounded-full p-2 hover:scale-110 transition-transform duration-200"
                 asChild
               >
-                <a href="mailto:alex@example.com">
+                <a href="mailto:bhagatk@umich.edu">
                   <Mail className="h-5 w-5" />
                 </a>
               </Button>

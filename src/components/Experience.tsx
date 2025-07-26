@@ -8,42 +8,51 @@ const Experience = () => {
   const [selectedExperience, setSelectedExperience] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const experiences = [
+  const experiences = [ 
+    {
+      title: "Software Development Intern",
+      company: "Dream11",
+      duration: "June 2024 - July 2024",
+      description: "Developed a comprehensive release management website using Remix full-stack framework, Prisma ORM, and MySQL to facilitate tracking and creation of Dream11 app releases with detailed build history and release information.",
+      detailedDescription: "As a Software Development Intern at Dream11 in Mumbai, India, I was responsible for building a release management system from the ground up using Remix, Prisma ORM, and MySQL. I designed and implemented dynamic, user-friendly frontend components with React, Shadcn, Tailwind CSS, and custom hooks, collaborating closely with backend engineers to ensure seamless data flow. Additionally, I executed thorough test cases using Callstack's Reassure to evaluate the functionality and performance of custom React Native components against baseline metrics.",
+      skills: ["Remix", "Prisma ORM", "MySQL", "React", "TypeScript", "Tailwind CSS", "React Native"],
+      logo: "../public/assets/dream11.jpg",
+      type: "Internship",
+      highlights: [
+        "Built a comprehensive release management website using Remix, Prisma ORM, and MySQL for Dream11 app releases",
+        "Designed dynamic frontend components with React, Shadcn, Tailwind CSS, and custom hooks to enhance user experience",
+        "Collaborated with backend teams to integrate detailed build history and release information",
+        "Executed test cases with Callstack's Reassure to validate custom React Native component performance"
+      ]
+    },
     {
       title: "Software Engineering Intern",
-      company: "Tech Innovations Inc.",
-      duration: "June 2024 - August 2024",
-      description: "Developed and maintained web applications using React and Node.js. Collaborated with cross-functional teams to deliver high-quality software solutions.",
-      detailedDescription: "As a Software Engineering Intern at Tech Innovations Inc., I was responsible for developing and maintaining modern web applications using cutting-edge technologies. I worked closely with senior developers to implement new features, optimize existing code, and ensure high-quality software delivery. My role involved participating in agile development processes, code reviews, and collaborative problem-solving sessions.",
-      skills: ["React", "Node.js", "TypeScript", "MongoDB"],
-      logo: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=100&h=100&fit=crop",
-      team: "8 developers",
+      company: "Web Spiders",
+      duration: "June 2023 - July 2023",
+      description: "Built EmpowerMeAI, a job-seeking and career-advising chatbot powered by GPT-3.5 Turbo 16k with a Python CLI and dynamic job fetching.",
+      skills: ["Python", "GPT-3.5 Turbo 16k", "CLI", "Glassdoor API", "Indeed API"],
+      logo: "../public/assets/webspiders.jpeg",
       type: "Internship",
-      highlights: ["Built responsive web components using React", "Implemented RESTful APIs with Node.js", "Collaborated with cross-functional teams", "Participated in agile development processes"]
+      highlights: [
+        "Built EmpowerMeAI, a job-seeking and career-advising chatbot tailored for job seekers in Kolkata, powered by the GPT-3.5 Turbo 16k model",
+        "Engineered the application in Python with an intuitive CLI interface",
+        "Integrated Glassdoor and Indeed APIs to dynamically fetch job listings based on users’ skills and expectations"
+      ]
     },
     {
-      title: "Full Stack Developer",
-      company: "StartupXYZ",
-      duration: "January 2024 - May 2024",
-      description: "Built responsive web applications and RESTful APIs. Implemented user authentication and database optimization techniques.",
-      detailedDescription: "At StartupXYZ, I took on the role of a Full Stack Developer where I was responsible for both frontend and backend development. I built responsive web applications from scratch, designed and implemented RESTful APIs, and worked extensively with database optimization. My contributions helped improve application performance and user experience significantly.",
-      skills: ["Python", "Django", "PostgreSQL", "AWS"],
-      logo: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=100&h=100&fit=crop",
-      team: "5 developers",
-      type: "Contract",
-      highlights: ["Developed full-stack web applications", "Designed RESTful API architecture", "Implemented user authentication systems", "Optimized database queries for better performance"]
-    },
-    {
-      title: "Research Assistant",
-      company: "University of Michigan",
-      duration: "September 2023 - December 2023",
-      description: "Conducted research on machine learning algorithms and data analysis. Published findings in academic conferences.",
-      detailedDescription: "As a Research Assistant at the University of Michigan, I conducted extensive research on machine learning algorithms and their applications in data analysis. I worked under the supervision of faculty members to explore innovative approaches to complex problems, analyze large datasets, and contribute to academic publications. This role enhanced my analytical skills and deepened my understanding of theoretical computer science concepts.",
-      skills: ["Python", "TensorFlow", "Pandas", "Jupyter"],
-      logo: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=100&h=100&fit=crop",
-      team: "3 researchers",
-      type: "Academic",
-      highlights: ["Conducted machine learning research", "Analyzed large datasets using Python", "Published findings in academic conferences", "Collaborated with faculty and graduate students"]
+      title: "AI/ML Engineer",
+      company: "Michigan Data Science Team",
+      duration: "August 2023 - November 2023",
+      description: "Programmed and trained an AI poker bot using Python and RLCard, leveraging Deep Q-Learning, Deep Monte Carlo, and Neural Fictitious Self-Play to optimize performance and achieve a 9% average money increase against a random agent.",
+      skills: ["Python", "NumPy", "pandas", "Matplotlib", "RLCard", "Deep Q-Learning (DQN)", "Deep Monte Carlo", "Neural Fictitious Self-Play"],
+      logo: "../public/assets/mdst.png",
+      type: "Role",
+      highlights: [
+        "Programmed an AI poker bot in Python using NumPy, pandas, and Matplotlib",
+        "Integrated the RLCard engine and trained the bot with Deep Q-Learning (DQN) and Deep Monte Carlo",
+        "Employed Neural Fictitious Self-Play with a replay memory size of 20,000 and training every 4 iterations to optimize learning",
+        "Achieved an average 9% increase in money after 100 iterations against a random agent"
+      ]
     }
   ];
 
@@ -138,7 +147,7 @@ const Experience = () => {
                 </div>
 
                 {/* Experience Details */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex items-center space-x-2">
                     <Calendar className="w-5 h-5 text-gray-500" />
                     <div>
@@ -146,13 +155,13 @@ const Experience = () => {
                       <p className="font-medium">{selectedExperience.duration}</p>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-2">
+                  {/* <div className="flex items-center space-x-2">
                     <Users className="w-5 h-5 text-gray-500" />
                     <div>
                       <p className="text-sm text-gray-500 dark:text-gray-400">Team Size</p>
                       <p className="font-medium">{selectedExperience.team}</p>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="flex items-center space-x-2">
                     <Award className="w-5 h-5 text-gray-500" />
                     <div>
@@ -163,11 +172,24 @@ const Experience = () => {
                 </div>
 
                 {/* Description */}
-                <div>
+                {/* <div>
                   <h3 className="text-lg font-semibold mb-2">About This Role</h3>
                   <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                     {selectedExperience.detailedDescription}
                   </p>
+                </div> */}
+
+                {/* Key Highlights */}
+                <div>
+                  <h3 className="text-lg font-semibold mb-3">Key Achievements</h3>
+                  <ul className="space-y-2">
+                    {selectedExperience.highlights.map((highlight: string, index: number) => (
+                      <li key={index} className="flex items-start space-x-2">
+                        <span className="w-2 h-2 bg-black dark:bg-white rounded-full mt-2 flex-shrink-0"></span>
+                        <span className="text-gray-600 dark:text-gray-300">{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
                 {/* Technologies */}
@@ -184,19 +206,6 @@ const Experience = () => {
                       </Badge>
                     ))}
                   </div>
-                </div>
-
-                {/* Key Highlights */}
-                <div>
-                  <h3 className="text-lg font-semibold mb-3">Key Achievements</h3>
-                  <ul className="space-y-2">
-                    {selectedExperience.highlights.map((highlight: string, index: number) => (
-                      <li key={index} className="flex items-start space-x-2">
-                        <span className="w-2 h-2 bg-black dark:bg-white rounded-full mt-2 flex-shrink-0"></span>
-                        <span className="text-gray-600 dark:text-gray-300">{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               </div>
             </>
