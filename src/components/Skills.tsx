@@ -102,7 +102,7 @@ const Skills = () => {
         </div>
 
         {/* Quick Skills Tags */}
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
             Technologies I Work With
           </h3>
@@ -135,7 +135,7 @@ const Skills = () => {
               </Badge>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

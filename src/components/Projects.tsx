@@ -3,118 +3,211 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Github, ExternalLink, Calendar, Users, Award } from 'lucide-react';
+import { Github, ExternalLink, Calendar, Users, Award, Pizza } from 'lucide-react';
 import { useState } from 'react';
 
+enum ProjectType {
+  Personal = "Personal",
+  Academic = "Academic"
+}
+
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  tech: string[];
+  demo?: string;
+  duration: string;
+  team: string;
+  type: ProjectType;
+  highlights: string[];
+}
+
 const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const personalProjects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with user authentication, payment processing, and admin dashboard.",
-      detailedDescription: "A comprehensive e-commerce platform built from the ground up, featuring secure user authentication, integrated payment processing through Stripe, real-time inventory management, and a powerful admin dashboard for managing products, orders, and analytics. The platform supports multiple payment methods, automated email notifications, and responsive design for optimal mobile experience.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=250&fit=crop",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      github: "https://github.com",
-      demo: "https://demo.com",
-      duration: "3 months",
-      team: "Solo project",
-      highlights: ["Implemented secure payment processing", "Built responsive admin dashboard", "Integrated real-time inventory tracking", "Deployed on AWS with CI/CD pipeline"]
-    },
-    {
-      title: "AI Chat Application",
-      description: "Real-time chat application with AI-powered responses and sentiment analysis.",
-      detailedDescription: "An innovative chat application that combines real-time messaging with AI-powered responses using OpenAI's GPT models. Features include sentiment analysis of conversations, smart reply suggestions, message encryption, and group chat functionality. The application uses WebSocket for real-time communication and includes a modern, intuitive interface.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=250&fit=crop",
-      tech: ["Python", "Flask", "OpenAI", "WebSocket"],
-      github: "https://github.com",
-      demo: "https://demo.com",
-      duration: "2 months",
+      title: "PromptTube",
+      description: "Chrome extension enabling interactive, AI‑driven Q&A and summaries on YouTube videos.",
+      image: "../assets/prompttube.png",
+      tech: ["React", "TypeScript", "Gemini AI", "Chrome Extensions", "Webpack"],
+      demo: "https://chromewebstore.google.com/detail/prompttube-an-ai-youtube/hkcgcanacnkfiboffehihmpnlnakbkni?hl=en&authuser=0",
+      duration: "May 2025 - Present",
       team: "2 developers",
-      highlights: ["Integrated OpenAI GPT for smart responses", "Built real-time messaging system", "Implemented sentiment analysis", "Added message encryption for security"]
+      type: ProjectType.Personal,
+      highlights: [
+        "Built and maintained PromptTube (600 + Web Store users), a Gemini driven sidebar that lets viewers chat with any YouTube video, receive real time summaries/answers, and jump to precise timestamps via on the fly transcript parsing",
+        "Injected a resizable, theme aware React component into YouTube’s DOM using content scripts, postMessage channels, and localStorage persistence to deliver a drag to resize UX that feels native in both dark and light modes.",
+        "Engineered transcript pipeline with XPath extraction, dual‑format regex parsing, and custom LRU caching",
+        "Packaged as a Manifest V3 extension with modular TypeScript codebase and Webpack build"
+      ]
     },
     {
-      title: "Task Management System",
-      description: "Collaborative project management tool with kanban boards and team features.",
-      detailedDescription: "A comprehensive project management platform featuring drag-and-drop kanban boards, real-time collaboration tools, task assignment and tracking, deadline management, and team communication features. The system includes role-based permissions, project analytics, file sharing capabilities, and integration with popular development tools.",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=250&fit=crop",
-      tech: ["Vue.js", "Express", "PostgreSQL", "Socket.io"],
-      github: "https://github.com",
-      demo: "https://demo.com",
-      duration: "4 months",
+      title: "Network File Server",
+      description: "C++ multi‑threaded TCP server offering remote file system access via custom protocol.",
+      image: "../assets/network-file-server.png",
+      tech: ["C++17", "Boost Threads", "TCP Sockets", "Custom Protocol"],
+      duration: "1 month",
       team: "3 developers",
-      highlights: ["Built drag-and-drop kanban interface", "Implemented real-time collaboration", "Created role-based permission system", "Integrated with third-party APIs"]
-    }
-  ];
-
-  const classProjects = [
-    {
-      title: "Database Management System",
-      description: "Built a relational database management system from scratch with SQL query processing.",
-      detailedDescription: "A complete database management system implementation built from scratch, featuring SQL query parsing and execution, B+ tree indexing for efficient data retrieval, transaction management with ACID properties, and support for complex joins and aggregations. The system includes a query optimizer and supports concurrent access with proper locking mechanisms.",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop",
-      tech: ["C++", "SQL", "Data Structures"],
-      github: "https://github.com",
-      duration: "1 semester",
-      team: "2 students",
-      highlights: ["Implemented B+ tree indexing", "Built SQL query parser and executor", "Added transaction management", "Optimized query performance"]
+      type: ProjectType.Academic,
+      highlights: [
+        "Engineered multi‑threaded TCP server exposing hierarchical file system with custom FS_* protocol",
+        "Implemented fine‑grained concurrency using Boost mutexes and per‑inode reader/writer locks",
+        "Designed crash‑consistent on‑disk inode structures and block allocation logic",
+        "Ensured safe deletion and traversal with hand‑over‑hand locking and deadlock‑free algorithms"
+      ]
     },
     {
-      title: "Machine Learning Classifier",
-      description: "Implemented various ML algorithms to classify handwritten digits with 95% accuracy.",
-      detailedDescription: "A comprehensive machine learning project implementing multiple classification algorithms including neural networks, support vector machines, and ensemble methods to classify handwritten digits from the MNIST dataset. The project achieved 95% accuracy through feature engineering, hyperparameter tuning, and ensemble techniques. Includes detailed analysis and visualization of results.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=250&fit=crop",
-      tech: ["Python", "scikit-learn", "NumPy", "Matplotlib"],
-      github: "https://github.com",
-      duration: "1 semester",
+      title: "Thread Library",
+      description: "User-level thread library in C++ with cooperative and preemptive scheduling",
+      image: "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=400&h=250&fit=crop",
+      tech: ["C++17", "ucontext API", "Mutex", "Condition Variables", "std::atomic"],
+      duration: "Jan 2025 – Feb 2025",
+      team: "3 developers",
+      type: ProjectType.Academic,
+      highlights: [
+        "Implemented Thread, Mutex, and CV classes using getcontext/makecontext/swapcontext for user-level context switching",
+        "Added thread::yield for cooperative scheduling and enabled timer-driven preemption via cpu::boot synchronous/asynchronous interrupts",
+        "Managed CPU interrupts with cpu::interrupt_disable/enable/suspend and std::atomic guard for multiprocessor atomicity",
+        "Enforced FIFO scheduling order across ready and waiting queues and integrated robust error handling with std::runtime_error"
+      ]
+    },
+    {
+      title: "Memory Manager (Pager)",
+      description: "Custom OS pager managing virtual memory and application address spaces",
+      image: "../assets/memory-manager.png",
+      tech: ["C++", "Virtual Memory", "Simulated MMU", "Clock Replacement", "Copy-on-Write"],
+      duration: "Feb 2025 – Mar 2025",
       team: "Solo project",
-      highlights: ["Achieved 95% classification accuracy", "Implemented multiple ML algorithms", "Created comprehensive data visualizations", "Performed extensive hyperparameter tuning"]
+      type: ProjectType.Academic,
+      highlights: [
+        "Implemented a kernel‐level pager with vm_init, vm_create, vm_switch, vm_map, vm_fault, and vm_destroy",
+        "Managed swap-backed and file-backed pages via simulated MMU traps and custom system calls",
+        "Maintained page tables and manual dirty/referenced bits using protection-fault updates",
+        "Applied Clock (second-chance) replacement and copy-on-write sharing for efficient eviction and fork"
+      ]
     },
     {
-      title: "Operating System Kernel",
-      description: "Developed a simple operating system kernel with process scheduling and memory management.",
-      detailedDescription: "A functional operating system kernel implementation featuring process scheduling with multiple algorithms (Round Robin, Priority-based), virtual memory management with paging, system call interface, interrupt handling, and basic file system operations. The kernel supports multitasking and includes debugging tools for system monitoring.",
-      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=250&fit=crop",
-      tech: ["C", "Assembly", "Linux", "System Programming"],
-      github: "https://github.com",
-      duration: "1 semester",
-      team: "2 students",
-      highlights: ["Implemented process scheduling algorithms", "Built virtual memory management", "Created system call interface", "Added interrupt handling system"]
+      title: "Pizza Delivery System",
+      description: "Concurrent pizza delivery simulation using C++ and a custom thread library",
+      image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=400&h=250&fit=crop",
+      tech: ["C++17", "Custom Thread Library", "Mutex", "Condition Variables"],
+      duration: "Jan 2025",
+      team: "Solo project",
+      type: ProjectType.Academic,
+      highlights: [
+        "Managed D driver and C customer threads with taxi-cab geometry matching logic",
+        "Utilized cpu::boot, thread, mutex, and cv classes for deterministic and non-deterministic scheduling",
+        "Coordinated threads via driver_ready, customer_ready, match, drive, and pay library functions",
+        "Processed per-customer input files to handle sequential location requests accurately"
+      ]
+    },
+    {
+      title: "DealDepot",
+      description: "Full‑stack e‑commerce solution with user authentication, payment processing, and admin dashboard.",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=250&fit=crop",
+      tech: ["MongoDB", "Express", "React", "Node.js", "Redux", "Stripe"],
+      demo: "https://dealdepot.onrender.com/",
+      duration: "May 2024 – June 2024",
+      team: "Solo project",
+      type: ProjectType.Personal,
+      highlights: [
+        "Implemented pagination and dynamic product filters in React",
+        "Integrated Stripe for secure payment processing",
+        "Built responsive admin dashboard with real‑time sales charts",
+        "Deployed full stack on AWS with CI/CD pipeline"
+      ]
+    },
+    {
+      title: "Search Engine Clone",
+      description: "Scalable search engine prototype with MapReduce‑powered indexing and REST API.",
+      image: "../assets/search-engine-clone.png",
+      tech: ["Flask", "SQLite", "MapReduce", "REST API"],
+      duration: "April 2024",
+      team: "2 developers",
+      type: ProjectType.Academic,
+      highlights: [
+        "Built a scalable search engine using Python's Flask and SQLite that mimics the functionality of leading search engines",
+        "Created a dynamic search server that leverages a service-oriented architecture to support scalable web search and focuses on advanced information retrieval concepts like text analysis and link analysis",
+        "Developed a segmented inverted index of web pages utilizing a pipeline of MapReduce programs, enhancing parallel data processing efficiency, and built an Index server with a REST API returning search results in JSON"
+      ]
+    },
+    {
+      title: "Instagram Clone",
+      description: "Client‑side Instagram clone with dynamic UI and scalable backend.",
+      image: "../assets/instagram.jpg",
+      tech: ["React", "Jinja", "Flask", "SQLite", "AWS EC2"],
+      duration: "Jan 2024 – Feb 2024",
+      team: "2 developers",
+      type: ProjectType.Academic,
+      highlights: [
+        "Built dynamic client‑side UI with React and Jinja templates",
+        "Implemented scalable REST API in Flask with SQLite persistence",
+        "Deployed full stack on AWS EC2 with CI/CD"
+      ]
+    },
+    {
+      title: "Piazza Post Classifier",
+      description: "C++ NLP tool classifying Q&A posts using Naive Bayes.",
+      image: "https://images.unsplash.com/photo-1526378722305-36bbc6c0bde9?w=400&h=250&fit=crop",
+      tech: ["C++", "NLP", "Bernoulli Naive Bayes"],
+      duration: "March 2023 – April 2023",
+      team: "2 developers",
+      type: ProjectType.Academic,
+      highlights: [
+        "Implemented Multivariable Bernoulli Naive Bayes classifier in C++",
+        "Preprocessed and vectorized 3,000 Piazza posts",
+        "Achieved 87.1% classification accuracy on test set"
+      ]
     }
   ];
 
-  const handleProjectClick = (project: any) => {
+  const handleProjectClick = (project: Project) => {
     setSelectedProject(project);
     setIsModalOpen(true);
   };
 
-  const ProjectCard = ({ project, type }: { project: any; type: string }) => (
+  const ProjectCard = ({ project, type }: { project: Project; type: ProjectType }) => (
     <Card 
       className="card-hover group bg-white dark:bg-gray-800 border-0 shadow-lg overflow-hidden cursor-pointer"
       onClick={() => handleProjectClick(project)}
     >
       <div className="relative overflow-hidden">
-        <img
+        {/* <img
           src={project.image}
           alt={project.title}
           className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-        />
+        /> */}
         <div className="absolute top-2 right-2">
           <Badge
-            variant={type === 'personal' ? 'default' : 'secondary'}
-            className={type === 'personal' ? 'bg-black text-white dark:bg-white dark:text-black' : 'bg-gray-600 text-white dark:bg-gray-300 dark:text-black'}
+            variant={'default'}
+            className={'bg-black text-white dark:bg-white dark:text-black'}
           >
-            {type === 'personal' ? 'Personal' : 'Academic'}
+            {type === ProjectType.Personal ? 'Personal' : 'Academic'}
           </Badge>
         </div>
       </div>
       
       <CardHeader>
-        <CardTitle className="text-xl font-bold text-gray-900 dark:text-white">
-          {project.title}
-        </CardTitle>
+        <div className="flex items-center justify-between mb-2">
+          <CardTitle className="text-xl font-bold text-gray-900 dark:text-white">
+            {project.title}
+          </CardTitle>
+          {project.demo && (
+            <Button 
+              size="sm" 
+              className="text-xs h-7 bg-black/5 dark:bg-white/10 text-black dark:text-white border-0 hover:bg-black/10 dark:hover:bg-white/20 transition-all duration-200 backdrop-blur-sm" 
+              asChild
+            >
+              <a href={project.demo} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                <ExternalLink className="w-3 h-3 mr-1.5" />
+                Check it out
+              </a>
+            </Button>
+          )}
+        </div>
         <CardDescription className="text-gray-600 dark:text-gray-300">
           {project.description}
         </CardDescription>
@@ -132,30 +225,13 @@ const Projects = () => {
             </Badge>
           ))}
         </div>
-        
-        <div className="flex space-x-2">
-          <Button size="sm" variant="outline" asChild>
-            <a href={project.github} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-              <Github className="w-4 h-4 mr-2" />
-              Code
-            </a>
-          </Button>
-          {project.demo && (
-            <Button size="sm" className="bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200" asChild>
-              <a href={project.demo} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-                <ExternalLink className="w-4 h-4 mr-2" />
-                Live Demo
-              </a>
-            </Button>
-          )}
-        </div>
       </CardContent>
     </Card>
   );
 
   return (
     <>
-      <section id="projects" className="py-20 gradient-bg">
+      <section id="projects" className="pt-20 pb-10 gradient-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -164,56 +240,52 @@ const Projects = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-gray-600 to-black dark:from-gray-400 dark:to-white mx-auto rounded-full"></div>
           </div>
 
-          {/* Personal Projects */}
           <div className="mb-16">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-              Personal Projects
-            </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {personalProjects.map((project, index) => (
                 <div key={index} className="animate-fade-in-up">
-                  <ProjectCard project={project} type="personal" />
+                  <ProjectCard project={project} type={project.type} />
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Class Projects */}
-          <div>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-              Class Projects
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {classProjects.map((project, index) => (
-                <div key={index} className="animate-fade-in-up">
-                  <ProjectCard project={project} type="academic" />
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
       {/* Project Detail Modal */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-slate-50 dark:bg-gray-950">
           {selectedProject && (
             <>
               <DialogHeader>
-                <DialogTitle className="text-2xl font-bold mb-4">
+                <DialogTitle className="text-2xl font-bold mb-4 flex items-center justify-between pr-4">
                   {selectedProject.title}
+                  {selectedProject.demo && (
+                    <Button 
+                      size="sm" 
+                      variant="outline"
+                      className="bg-black/5 text-black hover:bg-black/10 dark:bg-white/10 dark:text-white dark:hover:bg-white/20" 
+                      asChild
+                    >
+                      <a href={selectedProject.demo} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                        <ExternalLink className="w-3 h-3 mr-1" />
+                        Check it out
+                      </a>
+                    </Button>
+                  )}
                 </DialogTitle>
               </DialogHeader>
               
               <div className="space-y-6">
                 {/* Project Image */}
-                <div className="relative w-full h-64 rounded-lg overflow-hidden">
+                {/* <div className="relative w-full h-64 rounded-lg overflow-hidden">
                   <img
                     src={selectedProject.image}
                     alt={selectedProject.title}
                     className="w-full h-full object-cover"
                   />
-                </div>
+                </div> */}
 
                 {/* Project Details */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -236,18 +308,10 @@ const Projects = () => {
                     <div>
                       <p className="text-sm text-gray-500 dark:text-gray-400">Type</p>
                       <p className="font-medium">
-                        {personalProjects.includes(selectedProject) ? 'Personal' : 'Academic'}
+                        {selectedProject.type === ProjectType.Personal ? 'Personal' : 'Academic'}
                       </p>
                     </div>
                   </div>
-                </div>
-
-                {/* Description */}
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">About This Project</h3>
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                    {selectedProject.detailedDescription}
-                  </p>
                 </div>
 
                 {/* Technologies */}
@@ -277,24 +341,6 @@ const Projects = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
-
-                {/* Action Buttons */}
-                <div className="flex space-x-4 pt-4 border-t border-gray-200 dark:border-gray-700">
-                  <Button variant="outline" asChild>
-                    <a href={selectedProject.github} target="_blank" rel="noopener noreferrer">
-                      <Github className="w-4 h-4 mr-2" />
-                      View Code
-                    </a>
-                  </Button>
-                  {selectedProject.demo && (
-                    <Button className="bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200" asChild>
-                      <a href={selectedProject.demo} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Live Demo
-                      </a>
-                    </Button>
-                  )}
                 </div>
               </div>
             </>

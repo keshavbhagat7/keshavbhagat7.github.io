@@ -105,22 +105,22 @@ const Coursework = () => {
         </div>
 
         {/* GPA and Academic Standing */}
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="bg-gradient-to-r from-gray-600 to-black text-white p-6 rounded-xl shadow-lg">
+            <div className="bg-gradient-to-r from-blue-100/30 to-blue-200 text-black p-6 rounded-xl shadow-lg">
               <div className="text-3xl font-bold mb-2">3.829</div>
               <div className="text-sm opacity-90">Cumulative GPA</div>
             </div>
-            <div className="bg-gradient-to-r from-gray-700 to-gray-900 text-white p-6 rounded-xl shadow-lg">
+            <div className="bg-gradient-to-r from-blue-100/30 to-blue-200/40 text-black p-6 rounded-xl shadow-lg">
               <div className="text-3xl font-bold mb-2">6 Semesters</div>
               <div className="text-sm opacity-90">University Honors</div>
             </div>
-            <div className="bg-gradient-to-r from-gray-800 to-black text-white p-6 rounded-xl shadow-lg">
+            <div className="bg-gradient-to-r from-blue-100/30 to-blue-200 text-black p-6 rounded-xl shadow-lg">
               <div className="text-3xl font-bold mb-2">100+</div>
               <div className="text-sm opacity-90">Credit Hours</div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

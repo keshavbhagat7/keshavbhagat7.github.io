@@ -4,19 +4,46 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 import { Calendar, Users, Award, Building } from 'lucide-react';
 import { useState } from 'react';
 
+interface Experience {
+  title: string;
+  company: string;
+  duration: string;
+  description: string;
+  skills: string[];
+  logo: string;
+  type: string;
+  team?: string;
+  highlights: string[];
+}
+
 const Experience = () => {
-  const [selectedExperience, setSelectedExperience] = useState<any>(null);
+  const [selectedExperience, setSelectedExperience] = useState<Experience | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const experiences = [ 
+  const experiences: Experience[] = [ 
+    {
+      title: "Co-Founder and Full Stack Developer",
+      company: "nugget",
+      description: "AI‑powered micro‑learning mobile app delivering personalized bite‑sized lessons and quizzes.",
+      logo: "../assets/nugget.jpeg",
+      skills: ["Flutter", "Dart", "FastAPI", "Python", "PostgreSQL", "Docker", "OpenAI API", "Firebase Auth"],
+      duration: "June 2025 - Present",
+      type: "Entrepreneurship",
+      team: "2 developers",
+      highlights: [
+        "Architected an AI‑driven micro‑learning platform with GPT‑4‑generated bite‑sized lessons and adaptive quizzes",
+        "Containerized backend deployed on a Hostinger VPS via Docker + CI/CD, with JWT/Firebase authentication, CORS hardening, and modular micro‑services for topics, quizzes, and media",
+        "Released closed TestFlight beta of cross‑platform Flutter app with Google Sign‑In and Provider state management",
+        "Implemented a 4 tier importance × 5 level familiarity engine that dynamically adjusts lesson difficulty and quiz generation to each learner’s prior knowledge."
+      ]
+    },
     {
       title: "Software Development Intern",
       company: "Dream11",
       duration: "June 2024 - July 2024",
       description: "Developed a comprehensive release management website using Remix full-stack framework, Prisma ORM, and MySQL to facilitate tracking and creation of Dream11 app releases with detailed build history and release information.",
-      detailedDescription: "As a Software Development Intern at Dream11 in Mumbai, India, I was responsible for building a release management system from the ground up using Remix, Prisma ORM, and MySQL. I designed and implemented dynamic, user-friendly frontend components with React, Shadcn, Tailwind CSS, and custom hooks, collaborating closely with backend engineers to ensure seamless data flow. Additionally, I executed thorough test cases using Callstack's Reassure to evaluate the functionality and performance of custom React Native components against baseline metrics.",
       skills: ["Remix", "Prisma ORM", "MySQL", "React", "TypeScript", "Tailwind CSS", "React Native"],
-      logo: "../public/assets/dream11.jpg",
+      logo: "../assets/dream11.jpg",
       type: "Internship",
       highlights: [
         "Built a comprehensive release management website using Remix, Prisma ORM, and MySQL for Dream11 app releases",
@@ -31,7 +58,7 @@ const Experience = () => {
       duration: "June 2023 - July 2023",
       description: "Built EmpowerMeAI, a job-seeking and career-advising chatbot powered by GPT-3.5 Turbo 16k with a Python CLI and dynamic job fetching.",
       skills: ["Python", "GPT-3.5 Turbo 16k", "CLI", "Glassdoor API", "Indeed API"],
-      logo: "../public/assets/webspiders.jpeg",
+      logo: "../assets/webspiders.jpeg",
       type: "Internship",
       highlights: [
         "Built EmpowerMeAI, a job-seeking and career-advising chatbot tailored for job seekers in Kolkata, powered by the GPT-3.5 Turbo 16k model",
@@ -45,8 +72,8 @@ const Experience = () => {
       duration: "August 2023 - November 2023",
       description: "Programmed and trained an AI poker bot using Python and RLCard, leveraging Deep Q-Learning, Deep Monte Carlo, and Neural Fictitious Self-Play to optimize performance and achieve a 9% average money increase against a random agent.",
       skills: ["Python", "NumPy", "pandas", "Matplotlib", "RLCard", "Deep Q-Learning (DQN)", "Deep Monte Carlo", "Neural Fictitious Self-Play"],
-      logo: "../public/assets/mdst.png",
-      type: "Role",
+      logo: "../assets/mdst.png",
+      type: "Extra-Curricular",
       highlights: [
         "Programmed an AI poker bot in Python using NumPy, pandas, and Matplotlib",
         "Integrated the RLCard engine and trained the bot with Deep Q-Learning (DQN) and Deep Monte Carlo",
@@ -56,7 +83,7 @@ const Experience = () => {
     }
   ];
 
-  const handleExperienceClick = (experience: any) => {
+  const handleExperienceClick = (experience: Experience) => {
     setSelectedExperience(experience);
     setIsModalOpen(true);
   };
@@ -123,7 +150,7 @@ const Experience = () => {
 
       {/* Experience Detail Modal */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-slate-50 dark:bg-gray-950/90">
           {selectedExperience && (
             <>
               <DialogHeader>

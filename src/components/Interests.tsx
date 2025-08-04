@@ -12,7 +12,8 @@ const Interests = () => {
         "Cricket",
         "Soccer",
         "F1",
-        "Football"
+        "Football",
+        "Racquetball"
       ]
     },
     {
@@ -23,6 +24,7 @@ const Interests = () => {
         "Suits",
         "Sherlock",
         "Friends",
+        "The Office"
       ]
     },
     {
@@ -32,7 +34,8 @@ const Interests = () => {
         "Working out",
         "Travel",
         "Reading",
-        "Music"
+        "Music",
+        "Gaming"
       ]
     },
     {
@@ -43,6 +46,7 @@ const Interests = () => {
         "Hiking",
         "Rafting",
         "Bungee Jumping",
+        "Cliff Jumping"
       ]
     }
   ];
