@@ -19,5 +19,6 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: mode === 'production' ? '/keshavbhagat7.github.io/' : '/',
+  // User/Org site at https://keshavbhagat7.github.io uses root base
+  base: '/',
 }));
