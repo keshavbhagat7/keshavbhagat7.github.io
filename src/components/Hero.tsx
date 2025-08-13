@@ -24,11 +24,11 @@ const Hero = () => {
             <span className="block gradient-text pb-2">Keshav Bhagat</span>
           </h1>
 
-          <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-4 font-medium">
+          <p className="text-xl sm:text-2xl text-gray-800 dark:text-gray-300 mb-4 font-medium">
             Computer Science and Business @ University of Michigan
           </p>
 
-          <p className="text-lg text-gray-500 dark:text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-500 dark:text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
             Passionate full-stack developer and rising Computer Science senior dedicated to crafting elegant, user-centric solutions.
             Always eager to learn and take on new challenges.
           </p>
