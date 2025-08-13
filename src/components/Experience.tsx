@@ -25,7 +25,7 @@ const Experience = () => {
       title: "Co-Founder and Full Stack Developer",
       company: "swype",
       description: "AI‑powered micro‑learning mobile app delivering personalized bite‑sized lessons and quizzes.",
-      logo: "/assets/swype.png",
+      logo: `${import.meta.env.BASE_URL}assets/swype.png`,
       skills: ["Flutter", "FastAPI", "PostgreSQL", "Docker", "OpenAI API", "Google OAuth", "Firebase Auth"],
       duration: "June 2025 - Present",
       type: "Entrepreneurship",
@@ -43,7 +43,7 @@ const Experience = () => {
       duration: "May 2024 - July 2024",
       description: "Developed a comprehensive release management website using Remix full-stack framework, Prisma ORM, and MySQL to facilitate tracking and creation of Dream11 app releases with detailed build history and release information.",
       skills: ["Remix", "Prisma ORM", "MySQL", "React", "TypeScript", "Tailwind CSS", "React Native", "Callstack Reassure", "shadcn/ui", "Docker", "Github Actions"],
-      logo: "/assets/dream11.jpg",
+      logo: `${import.meta.env.BASE_URL}assets/dream11.jpg`,
       type: "Internship",
       highlights: [
         "Built a comprehensive release management site using Remix, Prisma ORM and MySQL, enabling tracking and creation of Dream11 app releases with build history and release information; used by 800+ employees, with 3,850+ weekly visits",
@@ -58,7 +58,7 @@ const Experience = () => {
       duration: "June 2023 - July 2023",
       description: "Built EmpowerMeAI, a job-seeking and career-advising chatbot powered by GPT-3.5 Turbo 16k with a Python CLI and dynamic job fetching.",
       skills: ["Python", "GPT-3.5 Turbo 16k", "CLI", "Glassdoor API", "Indeed API"],
-      logo: "/assets/webspiders.jpeg",
+      logo: `${import.meta.env.BASE_URL}assets/webspiders.jpeg`,
       type: "Internship",
       highlights: [
         "Built “EmpowerMeAI”, a job-seeking and career-advising chatbot tailored for job seekers in Kolkata, powered by the GPT-3.5 Turbo 16k model; ran a pilot with 75 users, resulting in an 18% reduction in time-to-apply",
@@ -72,7 +72,7 @@ const Experience = () => {
       duration: "August 2023 - November 2023",
       description: "Programmed and trained an AI poker bot using Python and RLCard, leveraging Deep Q-Learning, Deep Monte Carlo, and Neural Fictitious Self-Play to optimize performance and achieve a 9% average money increase against a random agent.",
       skills: ["Python", "NumPy", "pandas", "Matplotlib", "RLCard", "Deep Q-Learning (DQN)", "Deep Monte Carlo", "Neural Fictitious Self-Play"],
-      logo: "/assets/mdst.png",
+      logo: `${import.meta.env.BASE_URL}assets/mdst.png`,
       type: "Extra-Curricular",
       highlights: [
         "Programmed an AI poker bot in Python using NumPy, pandas, and Matplotlib",

@@ -31,8 +31,8 @@ const Projects = () => {
     {
       title: "PromptTube",
       description: "Chrome extension enabling interactive, AI‑driven Q&A and summaries on YouTube videos.",
-      image: "/assets/prompttube.png",
-      tech: ["React", "JavaScript", "TypeScript", "Manifest V3", "Webpack", "Gemini AI"],
+      image: `${import.meta.env.BASE_URL}assets/prompttube.png`,
+      tech: ["React", "TypeScript", "Gemini AI", "Chrome Extensions", "Webpack"],
       demo: "https://chromewebstore.google.com/detail/prompttube-an-ai-youtube/hkcgcanacnkfiboffehihmpnlnakbkni?hl=en&authuser=0",
       duration: "May 2025 - Present",
       team: "2 developers",
@@ -46,7 +46,7 @@ const Projects = () => {
     {
       title: "Network File Server",
       description: "C++ multi‑threaded TCP server offering remote file system access via custom protocol.",
-      image: "/assets/network-file-server.png",
+      image: `${import.meta.env.BASE_URL}assets/network-file-server.png`,
       tech: ["C++17", "Boost Threads", "TCP Sockets", "Custom Protocol"],
       duration: "1 month",
       team: "3 developers",
@@ -76,7 +76,7 @@ const Projects = () => {
     {
       title: "Memory Manager (Pager)",
       description: "Custom OS pager managing virtual memory and application address spaces",
-      image: "/assets/memory-manager.png",
+      image: `${import.meta.env.BASE_URL}assets/memory-manager.png`,
       tech: ["C++", "Virtual Memory", "Simulated MMU", "Clock Replacement", "Copy-on-Write"],
       duration: "Feb 2025 – Mar 2025",
       team: "Solo project",
@@ -121,7 +121,7 @@ const Projects = () => {
     {
       title: "Search Engine Clone",
       description: "Scalable search engine prototype with MapReduce‑powered indexing and REST API.",
-      image: "/assets/search-engine-clone.png",
+      image: `${import.meta.env.BASE_URL}assets/search-engine-clone.png`,
       tech: ["Flask", "SQLite", "MapReduce", "REST API"],
       duration: "April 2024",
       team: "2 developers",
@@ -135,7 +135,7 @@ const Projects = () => {
     {
       title: "Instagram Clone",
       description: "Client‑side Instagram clone with dynamic UI and scalable backend.",
-      image: "/assets/instagram.jpg",
+      image: `${import.meta.env.BASE_URL}assets/instagram.jpg`,
       tech: ["React", "Jinja", "Flask", "SQLite", "AWS EC2"],
       duration: "Jan 2024 – Feb 2024",
       team: "2 developers",
