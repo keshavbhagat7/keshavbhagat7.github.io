@@ -58,10 +58,7 @@ const Interests = () => {
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Interests & Hobbies
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-gray-600 to-black mx-auto rounded-full"></div>
-          <p className="text-lg text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto">
-            Beyond coding, I'm passionate about sports, shows, adventure, and travel
-          </p>
+          <div className="w-24 h-1 bg-black dark:bg-gray-300 mx-auto rounded-full"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

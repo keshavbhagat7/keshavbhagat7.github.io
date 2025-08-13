@@ -10,12 +10,12 @@ const Coursework = () => {
         "EECS 203 Discrete Mathematics",
         "EECS 280 Programming & Data Structures",
         "EECS 281 Data Structures & Algorithms",
-        "EECS 376 Foundations of Computer Science",
+        "EECS 376 Theory of Computation",
         "EECS 201 Computer Science Pragmatics"
       ]
     },
     {
-      title: "Computer Science Specializations",
+      title: "Computer Science Electives",
       courses: [
        "EECS 370 Introduction to Computer Organization",
         "EECS 482 Introduction to Operating Systems",
@@ -63,10 +63,7 @@ const Coursework = () => {
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Relevant Coursework
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-gray-600 to-black mx-auto rounded-full"></div>
-          <p className="text-lg text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto">
-            A comprehensive foundation in computer science, mathematics, and business principles
-          </p>
+          <div className="w-24 h-1 bg-black dark:bg-gray-300 mx-auto rounded-full"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

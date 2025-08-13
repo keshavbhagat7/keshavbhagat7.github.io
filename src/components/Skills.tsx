@@ -8,18 +8,18 @@ const Skills = () => {
       skills: [
         { name: "C++", level: 90 },
         { name: "Python", level: 90 },
+        { name: "SQL", level: 88 },
         { name: "JavaScript", level: 85 },
         { name: "TypeScript", level: 80 },
         { name: "Dart", level: 75 },
         { name: "Java", level: 70 },
-        { name: "Go", level: 60 }
       ]
     },
     {
       title: "Frontend",
       skills: [
         { name: "React", level: 90 },
-        { name: "HTML/CSS", level: 92 },
+        { name: "HTML/CSS", level: 89 },
         { name: "Remix", level: 88 },
         { name: "Tailwind CSS", level: 85 },
         { name: "Flutter", level: 80 },
@@ -40,15 +40,15 @@ const Skills = () => {
       ]
     },
     {
-      title: "Tools & Technologies",
+      title: "DevOps & Tools",
       skills: [
         { name: "Git", level: 90 },
-        { name: "Docker", level: 80 },
         { name: "Postman", level: 85 },
-        { name: "Manifest V3", level: 75 },
+        { name: "Docker", level: 80 },
+        { name: "Chrome Extension Manifest V3", level: 75 },
         { name: "AWS", level: 70 },
         { name: "Reassure", level: 68 },
-        { name: "Github Actions", level: 65 },
+        { name: "GitHub Actions", level: 65 },
       ]
     }
   ];
@@ -60,7 +60,7 @@ const Skills = () => {
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Skills & Technologies
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-gray-600 to-black mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-black dark:bg-gray-300 mx-auto rounded-full"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

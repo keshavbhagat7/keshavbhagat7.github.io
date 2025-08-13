@@ -11,7 +11,7 @@ const Hero = () => {
           <div className="mb-8">
             <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-white dark:border-gray-700 shadow-2xl animate-float">
               <img
-                src="../assets/headshot.jpg"
+                src="/assets/headshot.jpg"
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
@@ -38,7 +38,7 @@ const Hero = () => {
             <Button
               size="lg"
               onClick={() => window.open('/assets/resume.pdf', '_blank')}
-              className="bg-gradient-to-r from-gray-700 to-gray-900 hover:from-gray-900 hover:to-gray-800 text-white px-8 py-3 rounded-full text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105"
+              className="bg-gradient-to-r from-gray-600 to-gray-800 hover:from-gray-900 hover:to-gray-800 text-white px-8 py-3 rounded-full text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105"
             >
               <Download className="mr-2 h-5 w-5" />
               Download Resume

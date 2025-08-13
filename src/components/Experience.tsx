@@ -23,33 +23,33 @@ const Experience = () => {
   const experiences: Experience[] = [ 
     {
       title: "Co-Founder and Full Stack Developer",
-      company: "nugget",
+      company: "swype",
       description: "AI‑powered micro‑learning mobile app delivering personalized bite‑sized lessons and quizzes.",
-      logo: "../assets/nugget.jpeg",
-      skills: ["Flutter", "Dart", "FastAPI", "Python", "PostgreSQL", "Docker", "OpenAI API", "Firebase Auth"],
+      logo: "/assets/swype.png",
+      skills: ["Flutter", "FastAPI", "PostgreSQL", "Docker", "OpenAI API", "Google OAuth", "Firebase Auth"],
       duration: "June 2025 - Present",
       type: "Entrepreneurship",
       team: "2 developers",
       highlights: [
-        "Architected an AI‑driven micro‑learning platform with GPT‑4‑generated bite‑sized lessons and adaptive quizzes",
-        "Containerized backend deployed on a Hostinger VPS via Docker + CI/CD, with JWT/Firebase authentication, CORS hardening, and modular micro‑services for topics, quizzes, and media",
-        "Released closed TestFlight beta of cross‑platform Flutter app with Google Sign‑In and Provider state management",
-        "Implemented a 4 tier importance × 5 level familiarity engine that dynamically adjusts lesson difficulty and quiz generation to each learner’s prior knowledge."
+        "Designed and developed swype, an AI-powered microlearning application that delivers lessons, adaptive quizzes, and personalized learning analytics, with a “swype up” gesture to reveal bite-sized nuggets of information",
+        "Developed a dynamic content recommendation engine using a 4-tier importance × 5-level familiarity matrix to personalize quiz difficulty and lesson sequencing based on user knowledge",
+        "Built the backend using FastAPI, PostgreSQL, and Docker, with scalable APIs for lessons, quizzes, and nuggets; deployed to a VPS with CI/CD automation and JWT/Firebase auth",
+        "Engineered the iOS app in Flutter, implementing Google OAuth and scalable state management via Provider; currently rolling out to beta testers through TestFlight"
       ]
     },
     {
       title: "Software Development Intern",
       company: "Dream11",
-      duration: "June 2024 - July 2024",
+      duration: "May 2024 - July 2024",
       description: "Developed a comprehensive release management website using Remix full-stack framework, Prisma ORM, and MySQL to facilitate tracking and creation of Dream11 app releases with detailed build history and release information.",
-      skills: ["Remix", "Prisma ORM", "MySQL", "React", "TypeScript", "Tailwind CSS", "React Native"],
-      logo: "../assets/dream11.jpg",
+      skills: ["Remix", "Prisma ORM", "MySQL", "React", "TypeScript", "Tailwind CSS", "React Native", "Callstack Reassure", "shadcn/ui", "Docker", "Github Actions"],
+      logo: "/assets/dream11.jpg",
       type: "Internship",
       highlights: [
-        "Built a comprehensive release management website using Remix, Prisma ORM, and MySQL for Dream11 app releases",
-        "Designed dynamic frontend components with React, Shadcn, Tailwind CSS, and custom hooks to enhance user experience",
+        "Built a comprehensive release management site using Remix, Prisma ORM and MySQL, enabling tracking and creation of Dream11 app releases with build history and release information; used by 800+ employees, with 3,850+ weekly visits",
+        "Designed and implemented the frontend with Remix and React, incorporating shadcn/ui, Tailwind CSS, and various custom hooks to create dynamic and user-friendly components, enhancing the user experience",
         "Collaborated with backend teams to integrate detailed build history and release information",
-        "Executed test cases with Callstack's Reassure to validate custom React Native component performance"
+        "Executed 20+ tests via Callstack’s Reassure to verify functionality and performance of custom React Native components"
       ]
     },
     {
@@ -58,10 +58,10 @@ const Experience = () => {
       duration: "June 2023 - July 2023",
       description: "Built EmpowerMeAI, a job-seeking and career-advising chatbot powered by GPT-3.5 Turbo 16k with a Python CLI and dynamic job fetching.",
       skills: ["Python", "GPT-3.5 Turbo 16k", "CLI", "Glassdoor API", "Indeed API"],
-      logo: "../assets/webspiders.jpeg",
+      logo: "/assets/webspiders.jpeg",
       type: "Internship",
       highlights: [
-        "Built EmpowerMeAI, a job-seeking and career-advising chatbot tailored for job seekers in Kolkata, powered by the GPT-3.5 Turbo 16k model",
+        "Built “EmpowerMeAI”, a job-seeking and career-advising chatbot tailored for job seekers in Kolkata, powered by the GPT-3.5 Turbo 16k model; ran a pilot with 75 users, resulting in an 18% reduction in time-to-apply",
         "Engineered the application in Python with an intuitive CLI interface",
         "Integrated Glassdoor and Indeed APIs to dynamically fetch job listings based on users’ skills and expectations"
       ]
@@ -72,7 +72,7 @@ const Experience = () => {
       duration: "August 2023 - November 2023",
       description: "Programmed and trained an AI poker bot using Python and RLCard, leveraging Deep Q-Learning, Deep Monte Carlo, and Neural Fictitious Self-Play to optimize performance and achieve a 9% average money increase against a random agent.",
       skills: ["Python", "NumPy", "pandas", "Matplotlib", "RLCard", "Deep Q-Learning (DQN)", "Deep Monte Carlo", "Neural Fictitious Self-Play"],
-      logo: "../assets/mdst.png",
+      logo: "/assets/mdst.png",
       type: "Extra-Curricular",
       highlights: [
         "Programmed an AI poker bot in Python using NumPy, pandas, and Matplotlib",
@@ -96,7 +96,7 @@ const Experience = () => {
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Experience
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-gray-600 to-black mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-black dark:bg-gray-300 mx-auto rounded-full"></div>
           </div>
 
           <div className="space-y-8">
@@ -206,19 +206,6 @@ const Experience = () => {
                   </p>
                 </div> */}
 
-                {/* Key Highlights */}
-                <div>
-                  <h3 className="text-lg font-semibold mb-3">Key Achievements</h3>
-                  <ul className="space-y-2">
-                    {selectedExperience.highlights.map((highlight: string, index: number) => (
-                      <li key={index} className="flex items-start space-x-2">
-                        <span className="w-2 h-2 bg-black dark:bg-white rounded-full mt-2 flex-shrink-0"></span>
-                        <span className="text-gray-600 dark:text-gray-300">{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
                 {/* Technologies */}
                 <div>
                   <h3 className="text-lg font-semibold mb-3">Technologies Used</h3>
@@ -233,6 +220,19 @@ const Experience = () => {
                       </Badge>
                     ))}
                   </div>
+                </div>
+
+                {/* Key Highlights */}
+                <div>
+                  <h3 className="text-lg font-semibold mb-3">Key Achievements</h3>
+                  <ul className="space-y-2">
+                    {selectedExperience.highlights.map((highlight: string, index: number) => (
+                      <li key={index} className="flex items-start space-x-2">
+                        <span className="w-2 h-2 bg-black dark:bg-white rounded-full mt-2 flex-shrink-0"></span>
+                        <span className="text-gray-600 dark:text-gray-300">{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </>
