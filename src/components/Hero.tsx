@@ -13,7 +13,7 @@ const Hero = () => {
               <img
                 src={`${import.meta.env.BASE_URL}assets/headshot.jpg`}
                 alt="Profile"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover scale-110"
               />
             </div>
           </div>
@@ -41,7 +41,7 @@ const Hero = () => {
               className="bg-gradient-to-r from-gray-700 to-gray-900 hover:from-gray-900 hover:to-gray-800 text-white px-8 py-3 rounded-full text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105"
             >
               <Download className="mr-2 h-5 w-5" />
-              Download Resume
+              Resume
             </Button>
           </div>
 

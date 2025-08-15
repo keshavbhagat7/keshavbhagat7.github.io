@@ -114,9 +114,14 @@ const Experience = () => {
                       className="w-16 h-16 rounded-lg object-cover shadow-md"
                     />
                     <div className="flex-1">
-                      <CardTitle className="text-xl font-bold text-gray-900 dark:text-white">
-                        {exp.title}
-                      </CardTitle>
+                      <div className="flex items-center justify-between">
+                        <CardTitle className="text-xl font-bold text-gray-900 dark:text-white">
+                          {exp.title}
+                        </CardTitle>
+                        <span className="text-sm text-gray-400 dark:text-gray-500 italic">
+                          Click to learn more
+                        </span>
+                      </div>
                       <CardDescription className="text-lg font-medium text-gray-700 dark:text-gray-300">
                         {exp.company}
                       </CardDescription>

@@ -30,7 +30,7 @@ const Projects = () => {
   const personalProjects = [
     {
       title: "PromptTube",
-      description: "Chrome extension enabling interactive, AI‑driven Q&A and summaries on YouTube videos.",
+      description: "Chrome extension enabling interactive Q&A and summaries on YouTube videos with 600+ users.",
       image: `${import.meta.env.BASE_URL}assets/prompttube.png`,
       tech: ["React", "TypeScript", "Gemini AI", "Chrome Extensions", "Webpack"],
       demo: "https://chromewebstore.google.com/detail/prompttube-an-ai-youtube/hkcgcanacnkfiboffehihmpnlnakbkni?hl=en&authuser=0",
@@ -38,7 +38,7 @@ const Projects = () => {
       team: "2 developers",
       type: ProjectType.Personal,
       highlights: [
-        "Built PromptTube (Chrome Web Store Featured), a Chrome extension for Youtube with 600+ users and 4.7-star rating, enabling interactive video chat, instant summaries, multilingual Q&A, and clickable timestamps for precise navigation",
+        "Built PromptTube (Chrome Web Store Featured), a Gemini-powered Chrome extension for Youtube with 600+ users and 4.7-star rating, enabling interactive video chat, instant summaries, multilingual Q&A, and clickable timestamps for precise navigation",
         "Architected the core sidebar UX as a resizable, theme-aware React component injected into YouTube’s DOM via content scripts and postMessage; leveraged localStorage to persist user-adjusted sizes, chat history and settings across sessions",
         "Engineered a robust React/TypeScript MV3 transcript pipeline with retrying DOM queries, dual-format timestamp regex parsing, and an LRU chat-history cache; packaged with a multi-entry Webpack build"
       ]
