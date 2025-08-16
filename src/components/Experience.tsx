@@ -13,6 +13,7 @@ interface Experience {
   logo: string;
   type: string;
   team?: string;
+  location?: string;
   highlights: string[];
 }
 
@@ -30,10 +31,11 @@ const Experience = () => {
       duration: "June 2025 - Present",
       type: "Entrepreneurship",
       team: "2 developers",
+      location: "Ann Arbor, MI",
       highlights: [
-        "Designed and developed swype, an AI-powered microlearning application that delivers lessons, adaptive quizzes, and personalized learning analytics, with a “swype up” gesture to reveal bite-sized nuggets of information",
+        "Designed and developed swype, an AI-powered microlearning application that delivers lessons, adaptive quizzes, and personalized learning analytics, with a “swype up” gesture to reveal bite-sized snippets of information",
         "Developed a dynamic content recommendation engine using a 4-tier importance × 5-level familiarity matrix to personalize quiz difficulty and lesson sequencing based on user knowledge",
-        "Built the backend using FastAPI, PostgreSQL, and Docker, with scalable APIs for lessons, quizzes, and nuggets; deployed to a VPS with CI/CD automation and JWT/Firebase auth",
+        "Built the backend using FastAPI, PostgreSQL, and Docker, with REST APIs for lessons, quizzes, and bite-sized content modules; deployed to a VPS with CI/CD automation and JWT/Firebase auth",
         "Engineered the iOS app in Flutter, implementing Google OAuth and scalable state management via Provider; currently rolling out to beta testers through TestFlight"
       ]
     },
@@ -45,8 +47,10 @@ const Experience = () => {
       skills: ["Remix", "Prisma ORM", "MySQL", "React", "TypeScript", "Tailwind CSS", "React Native", "Callstack Reassure", "shadcn/ui", "Docker", "Github Actions"],
       logo: `${import.meta.env.BASE_URL}assets/dream11.jpg`,
       type: "Internship",
+      location: "Mumbai, India",
       highlights: [
-        "Built a comprehensive release management site using Remix, Prisma ORM and MySQL, enabling tracking and creation of Dream11 app releases with build history and release information; used by 800+ employees, with 3,850+ weekly visits",
+        "Built a comprehensive release management site using Remix, Prisma ORM and MySQL, enabling tracking and creation of Dream11 app releases with build history and release information; used by 800+ employees",
+        "Developed APIs using Prisma and MySQL, leveraging async programming, database query optimisations, and generic schema designs to achieve sub-100ms latency for 800+ engineers within Dream11’s microservices ecosystem",
         "Designed and implemented the frontend with Remix and React, incorporating shadcn/ui, Tailwind CSS, and various custom hooks to create dynamic and user-friendly components, enhancing the user experience",
         "Collaborated with backend teams to integrate detailed build history and release information",
         "Executed 20+ tests via Callstack’s Reassure to verify functionality and performance of custom React Native components"
@@ -60,8 +64,9 @@ const Experience = () => {
       skills: ["Python", "GPT-3.5 Turbo 16k", "CLI", "Glassdoor API", "Indeed API"],
       logo: `${import.meta.env.BASE_URL}assets/webspiders.jpeg`,
       type: "Internship",
+      location: "Kolkata, India",
       highlights: [
-        "Built “EmpowerMeAI”, a job-seeking and career-advising chatbot tailored for job seekers in Kolkata, powered by the GPT-3.5 Turbo 16k model; ran a pilot with 75 users, resulting in an 18% reduction in time-to-apply",
+        "Built “EmpowerMeAI”, a job-seeking and career-advising chatbot tailored for job seekers, powered by the GPT-3.5 Turbo 16k model; ran a pilot with 75 users, resulting in an 18% reduction in time-to-apply",
         "Engineered the application in Python with an intuitive CLI interface",
         "Integrated Glassdoor and Indeed APIs to dynamically fetch job listings based on users’ skills and expectations"
       ]
@@ -74,6 +79,7 @@ const Experience = () => {
       skills: ["Python", "NumPy", "pandas", "Matplotlib", "RLCard", "Deep Q-Learning (DQN)", "Deep Monte Carlo", "Neural Fictitious Self-Play"],
       logo: `${import.meta.env.BASE_URL}assets/mdst.png`,
       type: "Extra-Curricular",
+      location: "Ann Arbor, MI",
       highlights: [
         "Programmed an AI poker bot in Python using NumPy, pandas, and Matplotlib",
         "Integrated the RLCard engine and trained the bot with Deep Q-Learning (DQN) and Deep Monte Carlo",
@@ -179,7 +185,7 @@ const Experience = () => {
                 </div>
 
                 {/* Experience Details */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="flex items-center space-x-2">
                     <Calendar className="w-5 h-5 text-gray-500" />
                     <div>
@@ -187,13 +193,13 @@ const Experience = () => {
                       <p className="font-medium">{selectedExperience.duration}</p>
                     </div>
                   </div>
-                  {/* <div className="flex items-center space-x-2">
+                  <div className="flex items-center space-x-2">
                     <Users className="w-5 h-5 text-gray-500" />
                     <div>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">Team Size</p>
-                      <p className="font-medium">{selectedExperience.team}</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">Location</p>
+                      <p className="font-medium">{selectedExperience.location}</p>
                     </div>
-                  </div> */}
+                  </div>
                   <div className="flex items-center space-x-2">
                     <Award className="w-5 h-5 text-gray-500" />
                     <div>
