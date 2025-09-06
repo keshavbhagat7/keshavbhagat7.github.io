@@ -107,7 +107,7 @@ const Projects = () => {
       title: "DealDepot",
       description: "Full‑stack e‑commerce site with secure auth, Stripe payments, and an admin dashboard.",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=250&fit=crop",
-      tech: [ "Node.js", "MongoDB", "Express", "React","Redux", "Stripe"],
+      tech: [ "Node.js", "MongoDB", "Express", "React","Redux", "HTML/CSS", "Stripe"],
       demo: "https://dealdepot.onrender.com/",
       duration: "May 2024 – June 2024",
       team: "Solo project",

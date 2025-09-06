@@ -17,7 +17,7 @@ const Coursework = () => {
     {
       title: "Computer Science Electives",
       courses: [
-       "EECS 370 Introduction to Computer Organization",
+        "EECS 370 Introduction to Computer Organization",
         "EECS 482 Introduction to Operating Systems",
         "EECS 491 Introduction to Distributed Systems",
         "EECS 485 Web Systems",
