@@ -35,8 +35,8 @@ const Experience = () => {
       highlights: [
         "Designed and developed swype, an AI-powered microlearning application that delivers lessons, adaptive quizzes, and personalized learning analytics, with a “swype up” gesture to reveal bite-sized snippets of information",
         "Developed a dynamic content recommendation engine using a 4-tier importance × 5-level familiarity matrix to personalize quiz difficulty and lesson sequencing based on user knowledge",
-        "Built the backend using FastAPI, PostgreSQL, and Docker, with REST APIs for lessons, quizzes, and bite-sized content modules; deployed to a VPS with CI/CD automation and JWT/Firebase auth",
-        "Engineered the iOS app in Flutter, implementing Google OAuth and scalable state management via Provider; currently rolling out to beta testers through TestFlight"
+        "Shipped backend services with FastAPI and PostgreSQL, exposing REST APIs for lessons/quizzes, implementing Firebase Authentication and JWT-based authorization for protected routes; deployed to a VPS with CI/CD",
+        "Developed the iOS client in Flutter with Google OAuth and Provider-based state management; distributing to 100 beta users via TestFlight"
       ]
     },
     {
@@ -49,11 +49,11 @@ const Experience = () => {
       type: "Internship",
       location: "Mumbai, India",
       highlights: [
-        "Built a comprehensive release management site using Remix, Prisma ORM and MySQL, enabling tracking and creation of Dream11 app releases with build history and release information; used by 800+ employees",
-        "Developed APIs using Prisma and MySQL, leveraging async programming, database query optimisations, and generic schema designs to achieve sub-100ms latency for 800+ engineers within Dream11’s microservices ecosystem",
+        "Built an internal release management platform using Remix, Prisma, and MySQL; used by 800+ employees to create and track app releases, build history, and release metadata",
+        "Achieved sub-100ms p99.99 core API latency by optimizing MySQL/Prisma queries through indexing and query rewrites, and by designing reusable schema patterns to support 800+ internal users",
         "Designed and implemented the frontend with Remix and React, incorporating shadcn/ui, Tailwind CSS, and various custom hooks to create dynamic and user-friendly components, enhancing the user experience",
         "Collaborated with backend teams to integrate detailed build history and release information",
-        "Executed 20+ tests via Callstack’s Reassure to verify functionality and performance of custom React Native components"
+        "Wrote and executed 20+ performance tests via Callstack’s Reassure enforcing a <5% render-time regression threshold to catch performance drops in custom React Native components before release"
       ]
     },
     {
@@ -64,9 +64,9 @@ const Experience = () => {
       skills: ["Python", "GPT-3.5 Turbo 16k", "CLI", "Glassdoor API", "Indeed API"],
       logo: `${import.meta.env.BASE_URL}assets/webspiders.jpeg`,
       type: "Internship",
-      location: "Kolkata, India",
+      location: "San Jose, CA",
       highlights: [
-        "Built “EmpowerMeAI”, a job-seeking and career-advising chatbot tailored for job seekers, powered by the GPT-3.5 Turbo 16k model; ran a pilot with 75 users, resulting in an 18% reduction in time-to-apply",
+        "Built EmpowerMeAI, a job-seeking and career-advising chatbot tailored for job seekers, powered by the GPT-3.5 Turbo; ran a pilot with 75 users, resulting in an 18% reduction in time-to-apply",
         "Engineered the application in Python with an intuitive CLI interface",
         "Integrated Glassdoor and Indeed APIs to dynamically fetch job listings based on users’ skills and expectations"
       ]

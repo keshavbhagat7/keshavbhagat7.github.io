@@ -10,19 +10,19 @@ const Coursework = () => {
         "EECS 203 Discrete Mathematics",
         "EECS 280 Programming & Data Structures",
         "EECS 281 Data Structures & Algorithms",
+        "EECS 370 Introduction to Computer Organization",
         "EECS 376 Theory of Computation",
-        "EECS 201 Computer Science Pragmatics"
       ]
     },
     {
       title: "Computer Science Electives",
       courses: [
-        "EECS 370 Introduction to Computer Organization",
         "EECS 482 Introduction to Operating Systems",
         "EECS 491 Introduction to Distributed Systems",
         "EECS 485 Web Systems",
         "EECS 484 Database Management Systems",
-        "EECS 492 Introduction to Artificial Intelligence"
+        "EECS 492 Introduction to Artificial Intelligence",
+        "EECS 497 Human-Centered Software Design and Development"
       ]
     },
     {
@@ -32,6 +32,7 @@ const Coursework = () => {
         "TO 302 Managing Business Operations",
         "FIN 302 Making Financial Decisions",
         "STRATEGY 302 Business Strategy",
+        "ACC 471 Accounting Principles",
         "ECON 101 Principles of Economics I",
       ]
     },

@@ -38,9 +38,23 @@ const Projects = () => {
       team: "2 developers",
       type: ProjectType.Personal,
       highlights: [
-        "Built PromptTube (Chrome Web Store Featured), a Gemini-powered Chrome extension for Youtube with 600+ users and 4.7-star rating, enabling interactive video chat, instant summaries, multilingual Q&A, and clickable timestamps for precise navigation",
-        "Architected the core sidebar UX as a resizable, theme-aware React component injected into YouTube’s DOM via content scripts and postMessage; leveraged localStorage to persist user-adjusted sizes, chat history and settings across sessions",
+        "Built PromptTube (Chrome Web Store Featured), a Chrome extension for YouTube with 600+ users and 4.7-star rating, enabling interactive video chat, summaries, multilingual Q&A, and clickable timestamps for precise navigation",
+        "Implemented a resizable, theme-aware sidebar injected into YouTube’s DOM via MV3 content scripts and postMessage; persisted user settings and history via localStorage",
         "Engineered a robust React/TypeScript MV3 transcript pipeline with retrying DOM queries, dual-format timestamp regex parsing, and an LRU chat-history cache; packaged with a multi-entry Webpack build"
+      ]
+    },
+    {
+      title: "Sharded Key/Value Service with Paxos Replica Groups",
+      description: "Sharded, fault-tolerant key-value store using Paxos replication for linearizable ops and reconfiguration.",
+      image: '',
+      tech: ["Golang", "Paxos", "RPC"],
+      duration: "November 2025",
+      team: "Solo project",
+      type: ProjectType.Academic,
+      highlights: [
+        "Built a sharded, fault-tolerant key/value store with linearizable Get/Put/Append using Paxos replication",
+        "Implemented a Paxos-backed shardmaster (Join/Leave/Move/Query) to rebalance shards and drive reconfigurations",
+        "Added safe shard migration with ErrWrongGroup handling and dedup state transfer for at-most-once semantics"
       ]
     },
     {
@@ -114,7 +128,7 @@ const Projects = () => {
       type: ProjectType.Personal,
       highlights: [
         "Developed a full-featured e-commerce platform with React frontend and Node.js/Express backend with MongoDB",
-        "Implemented advanced product browsing features by building APIs with pagination and dynamic filters; added a secure Stripe-based payment system to enable seamless checkou",
+        "Implemented advanced product browsing features by building APIs with pagination and dynamic filters; added a secure Stripe-based payment system to enable seamless checkout",
         "Built an admin dashboard for managing products, orders, reviews, and users; integrated sales analytics with interactive charts to provide actionable insights"
       ]
     },

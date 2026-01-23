@@ -13,7 +13,7 @@ const Interests = () => {
         "Soccer",
         "F1",
         "Football",
-        "Racquetball"
+        "Pickleball"
       ]
     },
     {
