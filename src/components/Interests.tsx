@@ -17,17 +17,6 @@ const Interests = () => {
       ]
     },
     {
-      category: "Shows",
-      icon: Tv,
-      items: [
-        "The Big Bang Theory",
-        "Suits",
-        "Sherlock",
-        "Friends",
-        "The Office"
-      ]
-    },
-    {
       category: "Lifestyle",
       icon: Dumbbell,
       items: [
@@ -61,7 +50,7 @@ const Interests = () => {
           <div className="w-24 h-1 bg-black dark:bg-gray-300 mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {interests.map((interest, index) => (
             <Card
               key={index}

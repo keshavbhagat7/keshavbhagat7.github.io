@@ -44,7 +44,7 @@ const Projects = () => {
       ]
     },
     {
-      title: "Sharded Key/Value Service with Paxos Replica Groups",
+      title: "Sharded KV Service with Paxos Replica Groups",
       description: "Sharded, fault-tolerant key-value store using Paxos replication for linearizable ops and reconfiguration.",
       image: '',
       tech: ["Golang", "Paxos", "RPC"],
@@ -59,7 +59,7 @@ const Projects = () => {
     },
     {
       title: "Network File Server",
-      description: "C++ multi‑threaded TCP server offering remote file system access via custom protocol.",
+      description: "C++ multi‑threaded TCP server offering remote file system access via custom FS_* protocol.",
       image: `${import.meta.env.BASE_URL}assets/network-file-server.png`,
       tech: ["C++17", "Boost Threads", "TCP Sockets", "Custom Protocol"],
       duration: "April 2025",
@@ -88,7 +88,7 @@ const Projects = () => {
       ]
     },
     {
-      title: "Memory Manager (Pager)",
+      title: "Memory Manager",
       description: "Custom OS pager managing virtual memory and application address spaces",
       image: `${import.meta.env.BASE_URL}assets/memory-manager.png`,
       tech: ["C++", "Virtual Memory", "Simulated MMU", "Clock Replacement", "Copy-on-Write"],
@@ -203,22 +203,29 @@ const Projects = () => {
       </div>
       
       <CardHeader>
-        <div className="flex items-center justify-between mb-2">
-          <CardTitle className="text-xl font-bold text-gray-900 dark:text-white">
+        <div className="flex items-center justify-between mb-2 gap-2">
+          <CardTitle className="text-xl font-bold text-gray-900 dark:text-white flex-1">
             {project.title}
           </CardTitle>
-          {project.demo && (
-            <Button 
-              size="sm" 
-              className="text-xs h-7 bg-black/5 dark:bg-white/10 text-black dark:text-white border-0 hover:bg-black/10 dark:hover:bg-white/20 transition-all duration-200 backdrop-blur-sm" 
-              asChild
-            >
-              <a href={project.demo} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-                <ExternalLink className="w-3 h-3 mr-1.5" />
-                Check it out
-              </a>
-            </Button>
-          )}
+          <div className="flex flex-col items-end gap-1.5">
+            {!project.demo && (
+              <span className="text-xs text-gray-400 dark:text-gray-500 italic whitespace-nowrap">
+                Click to learn more
+              </span>
+            )}
+            {project.demo && (
+              <Button 
+                size="sm" 
+                className="text-xs h-7 bg-black/5 dark:bg-white/10 text-black dark:text-white border-0 hover:bg-black/10 dark:hover:bg-white/20 transition-all duration-200 backdrop-blur-sm" 
+                asChild
+              >
+                <a href={project.demo} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                  <ExternalLink className="w-3 h-3 mr-1.5" />
+                  Check it out
+                </a>
+              </Button>
+            )}
+          </div>
         </div>
         <CardDescription className="text-gray-600 dark:text-gray-300">
           {project.description}

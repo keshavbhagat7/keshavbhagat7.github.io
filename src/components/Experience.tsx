@@ -89,11 +89,6 @@ const Experience = () => {
     }
   ];
 
-  const handleExperienceClick = (experience: Experience) => {
-    setSelectedExperience(experience);
-    setIsModalOpen(true);
-  };
-
   return (
     <>
       <section id="experience" className="py-20 gradient-bg-alt">
@@ -109,8 +104,7 @@ const Experience = () => {
             {experiences.map((exp, index) => (
               <Card 
                 key={index} 
-                className="card-hover animate-fade-in-up bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-0 shadow-lg cursor-pointer"
-                onClick={() => handleExperienceClick(exp)}
+                className="card-hover animate-fade-in-up bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-0 shadow-lg"
               >
                 <CardHeader>
                   <div className="flex items-start space-x-4">
@@ -124,8 +118,8 @@ const Experience = () => {
                         <CardTitle className="text-xl font-bold text-gray-900 dark:text-white">
                           {exp.title}
                         </CardTitle>
-                        <span className="text-sm text-gray-400 dark:text-gray-500 italic">
-                          Click to learn more
+                        <span className="text-sm font-medium text-gray-900 dark:text-white italic">
+                          {exp.location}
                         </span>
                       </div>
                       <CardDescription className="text-lg font-medium text-gray-700 dark:text-gray-300">
@@ -138,9 +132,14 @@ const Experience = () => {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                    {exp.description}
-                  </p>
+                  <ul className="space-y-2 mb-6">
+                    {exp.highlights.map((highlight: string, index: number) => (
+                      <li key={index} className="flex items-start space-x-2">
+                        <span className="w-2 h-2 bg-black dark:bg-white rounded-full mt-2 flex-shrink-0"></span>
+                        <span className="text-gray-600 dark:text-gray-300">{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
                   <div className="flex flex-wrap gap-2">
                     {exp.skills.map((skill, skillIndex) => (
                       <Badge
@@ -159,97 +158,6 @@ const Experience = () => {
         </div>
       </section>
 
-      {/* Experience Detail Modal */}
-      <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-slate-50 dark:bg-gray-950/90">
-          {selectedExperience && (
-            <>
-              <DialogHeader>
-                <DialogTitle className="text-2xl font-bold mb-4">
-                  {selectedExperience.title}
-                </DialogTitle>
-              </DialogHeader>
-              
-              <div className="space-y-6">
-                {/* Company Logo and Info */}
-                <div className="flex items-center space-x-4">
-                  <img
-                    src={selectedExperience.logo}
-                    alt={`${selectedExperience.company} logo`}
-                    className="w-20 h-20 rounded-lg object-cover shadow-md"
-                  />
-                  <div>
-                    <h3 className="text-xl font-semibold">{selectedExperience.company}</h3>
-                    <p className="text-gray-600 dark:text-gray-400">{selectedExperience.duration}</p>
-                  </div>
-                </div>
-
-                {/* Experience Details */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="flex items-center space-x-2">
-                    <Calendar className="w-5 h-5 text-gray-500" />
-                    <div>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">Duration</p>
-                      <p className="font-medium">{selectedExperience.duration}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Users className="w-5 h-5 text-gray-500" />
-                    <div>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">Location</p>
-                      <p className="font-medium">{selectedExperience.location}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Award className="w-5 h-5 text-gray-500" />
-                    <div>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">Type</p>
-                      <p className="font-medium">{selectedExperience.type}</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Description */}
-                {/* <div>
-                  <h3 className="text-lg font-semibold mb-2">About This Role</h3>
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                    {selectedExperience.detailedDescription}
-                  </p>
-                </div> */}
-
-                {/* Technologies */}
-                <div>
-                  <h3 className="text-lg font-semibold mb-3">Technologies Used</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {selectedExperience.skills.map((skill: string, index: number) => (
-                      <Badge
-                        key={index}
-                        variant="outline"
-                        className="text-sm border-gray-300 dark:border-gray-600"
-                      >
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Key Highlights */}
-                <div>
-                  <h3 className="text-lg font-semibold mb-3">Key Achievements</h3>
-                  <ul className="space-y-2">
-                    {selectedExperience.highlights.map((highlight: string, index: number) => (
-                      <li key={index} className="flex items-start space-x-2">
-                        <span className="w-2 h-2 bg-black dark:bg-white rounded-full mt-2 flex-shrink-0"></span>
-                        <span className="text-gray-600 dark:text-gray-300">{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </>
-          )}
-        </DialogContent>
-      </Dialog>
     </>
   );
 };
