@@ -60,7 +60,7 @@ const Projects = () => {
     },
     {
       title: "Network File Server",
-      description: "C++ multi-threaded TCP file server with fine-grained per-inode locking, custom FS_* protocol, and crash-consistent on-disk structures supporting concurrent clients"
+      description: "C++ multi-threaded TCP file server with fine-grained per-inode locking, custom FS_* protocol, and crash-consistent on-disk structures supporting concurrent clients",
       image: `${import.meta.env.BASE_URL}assets/network-file-server.png`,
       tech: ["C++17", "Boost Threads", "TCP Sockets", "Custom Protocol"],
       duration: "April 2025",
