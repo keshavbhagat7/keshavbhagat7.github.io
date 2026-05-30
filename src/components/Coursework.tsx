@@ -10,18 +10,18 @@ const Coursework = () => {
         "EECS 203 Discrete Mathematics",
         "EECS 280 Programming & Data Structures",
         "EECS 281 Data Structures & Algorithms",
-        "EECS 370 Introduction to Computer Organization",
+        "EECS 370 Computer Organization",
         "EECS 376 Theory of Computation",
       ]
     },
     {
       title: "Computer Science Electives",
       courses: [
-        "EECS 482 Introduction to Operating Systems",
-        "EECS 491 Introduction to Distributed Systems",
+        "EECS 482 Operating Systems",
+        "EECS 491 Distributed Systems",
         "EECS 485 Web Systems",
         "EECS 484 Database Management Systems",
-        "EECS 492 Introduction to Artificial Intelligence",
+        "EECS 492 Artificial Intelligence",
         "EECS 497 Human-Centered Software Design and Development"
       ]
     },

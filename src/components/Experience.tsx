@@ -23,9 +23,9 @@ const Experience = () => {
 
   const experiences: Experience[] = [ 
     {
-      title: "Co-Founder and Full Stack Developer",
+      title: "Co-Founder and Software Engineer",
       company: "swype",
-      description: "AI‑powered micro‑learning mobile app delivering personalized bite‑sized lessons and quizzes.",
+      description: "Co-founded and built an AI-powered microlearning platform with adaptive content generation, personalized recommendation engine, and full-stack infrastructure ahead of production launch",
       logo: `${import.meta.env.BASE_URL}assets/swype.png`,
       skills: ["Flutter", "FastAPI", "PostgreSQL", "Docker", "OpenAI API", "Google OAuth", "Firebase Auth"],
       duration: "June 2025 - Present",
@@ -33,10 +33,10 @@ const Experience = () => {
       team: "2 developers",
       location: "Ann Arbor, MI",
       highlights: [
-        "Designed and developed swype, an AI-powered microlearning application that delivers lessons, adaptive quizzes, and personalized learning analytics, with a “swype up” gesture to reveal bite-sized snippets of information",
-        "Developed a dynamic content recommendation engine using a 4-tier importance × 5-level familiarity matrix to personalize quiz difficulty and lesson sequencing based on user knowledge",
-        "Shipped backend services with FastAPI and PostgreSQL, exposing REST APIs for lessons/quizzes, implementing Firebase Authentication and JWT-based authorization for protected routes; deployed to a VPS with CI/CD",
-        "Developed the iOS client in Flutter with Google OAuth and Provider-based state management; distributing to 100 beta users via TestFlight"
+        "Built swype, an AI-powered microlearning platform with adaptive lessons and personalized quizzes driven by a 4-tier importance × 5-level familiarity matrix that adjusts difficulty and lesson sequencing to evolving user knowledge",
+        "Designed structured AI content-generation pipelines with schema-constrained outputs, iterative prompting, and retrieval-based reuse, balancing model quality, latency, and inference cost to improve consistency, reduce hallucinations, and support scalable user experiences",
+        "Architected stateless FastAPI/PostgreSQL backend with connection pooling and Docker Compose orchestration for AI-generated lessons, quizzes, and recommendations, designed for horizontal scalability ahead of production launch; secured with Firebase Auth, JWT authorization, and CI/CD-automated deployments",
+        "Developed the iOS client in Flutter with Google OAuth and Provider-based state management; distributing to beta users via TestFlight ahead of production launch"
       ]
     },
     {
@@ -49,10 +49,9 @@ const Experience = () => {
       type: "Internship",
       location: "Mumbai, India",
       highlights: [
-        "Built an internal release management platform using Remix, Prisma, and MySQL; used by 800+ employees to create and track app releases, build history, and release metadata",
-        "Achieved sub-100ms p99.99 core API latency by optimizing MySQL/Prisma queries through indexing and query rewrites, and by designing reusable schema patterns to support 800+ internal users",
-        "Designed and implemented the frontend with Remix and React, incorporating shadcn/ui, Tailwind CSS, and various custom hooks to create dynamic and user-friendly components, enhancing the user experience",
-        "Collaborated with backend teams to integrate detailed build history and release information",
+        "Centralized release coordination across engineering, QA, and release teams by building an internal release management platform (Remix, Prisma, MySQL), eliminating ad-hoc tracking for 800+ employees across release creation, build history, and metadata",
+        "Achieved sub-100ms p99 core API latency by optimizing MySQL/Prisma queries through indexing and query rewrites, and by designing reusable schema patterns to support high-throughput internal release workflows",
+        "Built dynamic UI workflows in React/Remix using Tailwind and reusable hooks, delivering forms, tables, filters, validations, and release-tracking components",
         "Wrote and executed 20+ performance tests via Callstack’s Reassure enforcing a <5% render-time regression threshold to catch performance drops in custom React Native components before release"
       ]
     },
@@ -66,9 +65,8 @@ const Experience = () => {
       type: "Internship",
       location: "San Jose, CA",
       highlights: [
-        "Built EmpowerMeAI, a job-seeking and career-advising chatbot tailored for job seekers, powered by the GPT-3.5 Turbo; ran a pilot with 75 users, resulting in an 18% reduction in time-to-apply",
-        "Engineered the application in Python with an intuitive CLI interface",
-        "Integrated Glassdoor and Indeed APIs to dynamically fetch job listings based on users’ skills and expectations"
+        "Built EmpowerMeAI, a job-seeking and career-advising chatbot tailored for job seekers, powered by the GPT-3.5 Turbo; ran a closed pilot, resulting in an 18% reduction in time-to-apply",
+        "Engineered the chatbot backbone with dynamic user-context injection, a career advisor system prompt, and per-session conversation history for multi-turn coherence",
       ]
     },
     {
@@ -81,10 +79,9 @@ const Experience = () => {
       type: "Extra-Curricular",
       location: "Ann Arbor, MI",
       highlights: [
-        "Programmed an AI poker bot in Python using NumPy, pandas, and Matplotlib",
-        "Integrated the RLCard engine and trained the bot with Deep Q-Learning (DQN) and Deep Monte Carlo",
-        "Employed Neural Fictitious Self-Play with a replay memory size of 20,000 and training every 4 iterations to optimize learning",
-        "Achieved an average 9% increase in money after 100 iterations against a random agent"
+        "Designed and trained an AI poker bot in Python using the RLCard framework, experimenting with three RL algorithms - Deep Q-Learning, Deep Monte Carlo, and Neural Fictitious Self-Play — to compare convergence behavior and exploitability",
+        "Tuned replay memory, training frequency, and self-play parameters to stabilize learning against non-stationary opponents in a partially observable environment",
+        "Evaluated bot performance across 100 iterations against a random agent baseline, achieving a 9% average chip gain - establishing a benchmark for further algorithm comparison"
       ]
     }
   ];

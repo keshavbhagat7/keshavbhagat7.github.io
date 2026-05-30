@@ -4,55 +4,24 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Programming Languages",
-      skills: [
-        "C++",
-        "Python",
-        "SQL",
-        "Golang",
-        "JavaScript",
-        "TypeScript",
-        "Dart",
-        "Java",
-      ]
+      title: "Languages",
+      skills: ["C++", "Python", "Go", "TypeScript", "JavaScript", "SQL", "Dart", "Java"]
     },
     {
       title: "Backend & Database",
-      skills: [
-        "FastAPI",
-        "MySQL",
-        "PostgreSQL",
-        "Prisma ORM",
-        "REST API Design",
-        "Node.js",
-        "Express",
-        "MongoDB",
-      ]
+      skills: ["FastAPI", "Node.js", "Express", "PostgreSQL", "MySQL", "MongoDB", "Firebase", "Prisma", "SQLAlchemy", "REST API Design"]
+    },
+    {
+      title: "AI/ML",
+      skills: ["OpenAI API", "Gemini API", "LLM Tool Calling", "Structured Outputs", "Vector Search", "pgvector"]
     },
     {
       title: "Frontend",
-      skills: [
-        "React",
-        "HTML/CSS",
-        "Remix",
-        "Tailwind CSS",
-        "Flutter",
-        "Next.js",
-        "Redux",
-        "React Native",
-      ]
+      skills: ["React", "Next.js", "Remix", "Flutter", "Tailwind CSS", "Redux", "React Native", "HTML/CSS"]
     },
     {
       title: "DevOps & Tools",
-      skills: [
-        "Git",
-        "AWS",
-        "Docker",
-        "Postman",
-        "Chrome Extension Manifest V3",
-        "Reassure",
-        "GitHub Actions",
-      ]
+      skills: ["Docker", "AWS", "GitHub Actions", "CI/CD", "Git", "Webpack", "Reassure"]
     }
   ];
 

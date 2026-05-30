@@ -30,7 +30,7 @@ const Projects = () => {
   const personalProjects = [
     {
       title: "PromptTube",
-      description: "Chrome extension enabling interactive Q&A and summaries on YouTube videos with 600+ users.",
+      description: "AI-powered Chrome extension with 600+ daily active users and 4.7-star rating, enabling conversational Q&A, summaries, and timestamp navigation over YouTube transcripts",
       image: `${import.meta.env.BASE_URL}assets/prompttube.png`,
       tech: ["React", "TypeScript", "Gemini AI", "Chrome Extensions", "Webpack"],
       demo: "https://chromewebstore.google.com/detail/prompttube-an-ai-youtube/hkcgcanacnkfiboffehihmpnlnakbkni?hl=en&authuser=0",
@@ -38,9 +38,9 @@ const Projects = () => {
       team: "2 developers",
       type: ProjectType.Personal,
       highlights: [
-        "Built PromptTube (Chrome Web Store Featured), a Chrome extension for YouTube with 600+ users and 4.7-star rating, enabling interactive video chat, summaries, multilingual Q&A, and clickable timestamps for precise navigation",
-        "Implemented a resizable, theme-aware sidebar injected into YouTube’s DOM via MV3 content scripts and postMessage; persisted user settings and history via localStorage",
-        "Engineered a robust React/TypeScript MV3 transcript pipeline with retrying DOM queries, dual-format timestamp regex parsing, and an LRU chat-history cache; packaged with a multi-entry Webpack build"
+        "Built PromptTube (Chrome Web Store Featured), an AI-powered Chrome extension with 600+ daily active users and a 4.7-star rating that enables conversational querying, multilingual Q&A, instant summaries, and timestamp-grounded navigation across long-form YouTube transcripts",
+        "Designed a conversational sidebar UX injected into YouTube’s DOM via MV3 content scripts and postMessage, persisting chat history, user preferences, and interaction state across sessions",
+        "Engineered a transcript retrieval pipeline with resilient DOM extraction, timestamp alignment, retry handling, and caching strategies to support reliable conversational interactions over long-form video content"
       ]
     },
     {
@@ -54,12 +54,13 @@ const Projects = () => {
       highlights: [
         "Built a sharded, fault-tolerant key/value store with linearizable Get/Put/Append using Paxos replication",
         "Implemented a Paxos-backed shardmaster (Join/Leave/Move/Query) to rebalance shards and drive reconfigurations",
-        "Added safe shard migration with ErrWrongGroup handling and dedup state transfer for at-most-once semantics"
+        "Added safe shard migration with ErrWrongGroup handling and dedup state transfer for at-most-once semantics",
+        "Serialized shard movements through the Paxos log to preserve linearizability under concurrent reconfigurations, preventing split-brain"
       ]
     },
     {
       title: "Network File Server",
-      description: "C++ multi‑threaded TCP server offering remote file system access via custom FS_* protocol.",
+      description: "C++ multi-threaded TCP file server with fine-grained per-inode locking, custom FS_* protocol, and crash-consistent on-disk structures supporting concurrent clients"
       image: `${import.meta.env.BASE_URL}assets/network-file-server.png`,
       tech: ["C++17", "Boost Threads", "TCP Sockets", "Custom Protocol"],
       duration: "April 2025",
@@ -69,7 +70,8 @@ const Projects = () => {
         "Engineered multi‑threaded TCP server exposing hierarchical file system with custom FS_* protocol",
         "Implemented fine‑grained concurrency using Boost mutexes and per‑inode reader/writer locks",
         "Designed crash‑consistent on‑disk inode structures and block allocation logic",
-        "Ensured safe deletion and traversal with hand‑over‑hand locking and deadlock‑free algorithms"
+        "Ensured safe deletion and traversal with hand‑over‑hand locking and deadlock‑free algorithms",
+        "Validated and sanitized all client requests against untrusted network input, maintaining correct operation regardless of malformed or malicious messages"
       ]
     },
     {
@@ -81,10 +83,9 @@ const Projects = () => {
       team: "3 developers",
       type: ProjectType.Academic,
       highlights: [
-        "Implemented Thread, Mutex, and CV classes using getcontext/makecontext/swapcontext for user-level context switching",
-        "Added thread::yield for cooperative scheduling and enabled timer-driven preemption via cpu::boot synchronous/asynchronous interrupts",
-        "Managed CPU interrupts with cpu::interrupt_disable/enable/suspend and std::atomic guard for multiprocessor atomicity",
-        "Enforced FIFO scheduling order across ready and waiting queues and integrated robust error handling with std::runtime_error"
+        "Built a POSIX-style thread library from scratch in C++17 using ucontext (getcontext/makecontext/swapcontext) for user-level context switching without OS kernel involvement",
+        "Added preemptive scheduling via timer-driven interrupts, using cpu::interrupt_disable/enable/suspend and std::atomic guard to protect critical sections across multiple CPUs",
+        "Implemented Thread, Mutex, and CV classes with FIFO scheduling guarantees, handling spurious wakeups, recursive lock attempts, and runtime error propagation",
       ]
     },
     {
@@ -96,27 +97,27 @@ const Projects = () => {
       team: "Solo project",
       type: ProjectType.Academic,
       highlights: [
-        "Implemented a kernel‐level pager with vm_init, vm_create, vm_switch, vm_map, vm_fault, and vm_destroy",
-        "Managed swap-backed and file-backed pages via simulated MMU traps and custom system calls",
-        "Maintained page tables and manual dirty/referenced bits using protection-fault updates",
-        "Applied Clock (second-chance) replacement and copy-on-write sharing for efficient eviction and fork"
+        "Implemented the full pager interface (vm_init, vm_create, vm_switch, vm_map, vm_fault, vm_destroy) responding to MMU traps and system calls from application processes",
+        "Managed both swap-backed and file-backed pages across physical memory, swap space, and regular files, choosing storage based on page type and access history",
+        "Implemented Clock (second-chance) page replacement using dirty/referenced bits updated via protection faults, balancing eviction cost against recency",
+        "Supported copy-on-write fork: child processes share read-only parent pages until a write fault triggers duplication, minimizing memory overhead"
       ]
     },
-    {
-      title: "Pizza Delivery System",
-      description: "Concurrent pizza delivery simulation using C++ and a custom thread library",
-      image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=400&h=250&fit=crop",
-      tech: ["C++17", "Custom Thread Library", "Mutex", "Condition Variables"],
-      duration: "Jan 2025",
-      team: "Solo project",
-      type: ProjectType.Academic,
-      highlights: [
-        "Managed D driver and C customer threads with taxi-cab geometry matching logic",
-        "Utilized cpu::boot, thread, mutex, and cv classes for deterministic and non-deterministic scheduling",
-        "Coordinated threads via driver_ready, customer_ready, match, drive, and pay library functions",
-        "Processed per-customer input files to handle sequential location requests accurately"
-      ]
-    },
+    // {
+    //   title: "Pizza Delivery System",
+    //   description: "Concurrent pizza delivery simulation using C++ and a custom thread library",
+    //   image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=400&h=250&fit=crop",
+    //   tech: ["C++17", "Custom Thread Library", "Mutex", "Condition Variables"],
+    //   duration: "Jan 2025",
+    //   team: "Solo project",
+    //   type: ProjectType.Academic,
+    //   highlights: [
+    //     "Managed D driver and C customer threads with taxi-cab geometry matching logic",
+    //     "Utilized cpu::boot, thread, mutex, and cv classes for deterministic and non-deterministic scheduling",
+    //     "Coordinated threads via driver_ready, customer_ready, match, drive, and pay library functions",
+    //     "Processed per-customer input files to handle sequential location requests accurately"
+    //   ]
+    // },
     {
       title: "DealDepot",
       description: "Full‑stack e‑commerce site with secure auth, Stripe payments, and an admin dashboard.",
@@ -133,8 +134,8 @@ const Projects = () => {
       ]
     },
     {
-      title: "Search Engine Clone",
-      description: "Scalable search engine prototype with MapReduce‑powered indexing and REST API.",
+      title: "Search Engine",
+      description: "Scalable search engine with MapReduce-powered inverted index, TF-IDF ranking, and REST API - built from scratch using Flask and SQLite",
       image: `${import.meta.env.BASE_URL}assets/search-engine-clone.png`,
       tech: ["Flask", "SQLite", "MapReduce", "REST API"],
       duration: "April 2024",
@@ -146,34 +147,34 @@ const Projects = () => {
         "Developed a segmented inverted index of web pages utilizing a pipeline of MapReduce programs, enhancing parallel data processing efficiency, and built an Index server with a REST API returning search results in JSON"
       ]
     },
-    {
-      title: "Instagram Clone",
-      description: "Client‑side Instagram clone with dynamic UI and scalable backend.",
-      image: `${import.meta.env.BASE_URL}assets/instagram.jpg`,
-      tech: ["Flask", "SQLite", "React", "Jinja",  "AWS EC2"],
-      duration: "Jan 2024 – Feb 2024",
-      team: "2 developers",
-      type: ProjectType.Academic,
-      highlights: [
-        "Built dynamic client‑side UI with React and Jinja templates",
-        "Implemented scalable REST API in Flask with SQLite persistence",
-        "Deployed full stack on AWS EC2 with CI/CD"
-      ]
-    },
-    {
-      title: "Piazza Post Classifier",
-      description: "C++ NLP tool classifying Q&A posts using Naive Bayes.",
-      image: "https://images.unsplash.com/photo-1526378722305-36bbc6c0bde9?w=400&h=250&fit=crop",
-      tech: ["C++", "NLP", "Bernoulli Naive Bayes"],
-      duration: "March 2023 – April 2023",
-      team: "2 developers",
-      type: ProjectType.Academic,
-      highlights: [
-        "Implemented Multivariable Bernoulli Naive Bayes classifier in C++",
-        "Preprocessed and vectorized 3,000 Piazza posts",
-        "Achieved 87.1% classification accuracy on test set"
-      ]
-    }
+    // {
+    //   title: "Instagram Clone",
+    //   description: "Client‑side Instagram clone with dynamic UI and scalable backend.",
+    //   image: `${import.meta.env.BASE_URL}assets/instagram.jpg`,
+    //   tech: ["Flask", "SQLite", "React", "Jinja",  "AWS EC2"],
+    //   duration: "Jan 2024 – Feb 2024",
+    //   team: "2 developers",
+    //   type: ProjectType.Academic,
+    //   highlights: [
+    //     "Built dynamic client‑side UI with React and Jinja templates",
+    //     "Implemented scalable REST API in Flask with SQLite persistence",
+    //     "Deployed full stack on AWS EC2 with CI/CD"
+    //   ]
+    // },
+    // {
+    //   title: "Piazza Post Classifier",
+    //   description: "C++ NLP tool classifying Q&A posts using Naive Bayes.",
+    //   image: "https://images.unsplash.com/photo-1526378722305-36bbc6c0bde9?w=400&h=250&fit=crop",
+    //   tech: ["C++", "NLP", "Bernoulli Naive Bayes"],
+    //   duration: "March 2023 – April 2023",
+    //   team: "2 developers",
+    //   type: ProjectType.Academic,
+    //   highlights: [
+    //     "Implemented Multivariable Bernoulli Naive Bayes classifier in C++",
+    //     "Preprocessed and vectorized 3,000 Piazza posts",
+    //     "Achieved 87.1% classification accuracy on test set"
+    //   ]
+    // }
   ];
 
   const handleProjectClick = (project: Project) => {

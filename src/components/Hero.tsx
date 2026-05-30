@@ -29,8 +29,8 @@ const Hero = () => {
           </p>
 
           <p className="text-lg sm:text-xl text-gray-500 dark:text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Passionate full-stack developer and rising Computer Science senior dedicated to crafting elegant, user-centric solutions.
-            Always eager to learn and take on new challenges.
+          Full-stack engineer and co-founder building AI-powered products, with experience across distributed systems, 
+          LLM pipelines, and production mobile/web apps.
           </p>
 
           {/* CTA */}

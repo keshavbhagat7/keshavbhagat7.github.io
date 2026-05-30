@@ -31,7 +31,7 @@ const Interests = () => {
       category: "Adventure Sports",
       icon: Bike,
       items: [
-        "Sky diving",
+        "Skydiving",
         "Hiking",
         "Rafting",
         "Bungee Jumping",
